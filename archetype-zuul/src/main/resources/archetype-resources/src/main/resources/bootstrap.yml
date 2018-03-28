@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: zuul
+  cloud:
+    config:
+      uri: http://localhost:1111
+      fail-fast: true  
