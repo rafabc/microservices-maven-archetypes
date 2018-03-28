@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: eureka
-  cloud:
-    config:
-      uri: http://localhost:1111
-      fail-fast: true
