@@ -15,7 +15,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:2222/eureka
+      defaultZone: http://${eureka-host}:${eureka-port}/eureka
     healthcheck:
       enabled: true
     lease:

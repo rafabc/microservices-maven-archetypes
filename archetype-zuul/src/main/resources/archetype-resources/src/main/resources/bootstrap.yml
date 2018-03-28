@@ -3,5 +3,5 @@ spring:
     name: zuul
   cloud:
     config:
-      uri: http://localhost:1111
-      fail-fast: true  
+      uri: ${config-server-host}:${config-server-port}
+      fail-fast: true 

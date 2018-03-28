@@ -2,4 +2,4 @@ spring:
   application:
     name: config-server
 server:
-  port: 1111
+  port: ${config-server-port}
