@@ -8,7 +8,14 @@
             <artifactId>archetype-zuul</artifactId>
             <version>5.0.0</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-zuul</repository>
-            <description>Archetype Neflix OSS Zull</description>
+            <description>Archetype Neflix OSS Zuul</description>
+        </archetype>
+		<archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-eureka</artifactId>
+            <version>5.0.0</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-eureka</repository>
+            <description>Archetype Neflix OSS Eureka</description>
         </archetype>
     </archetypes>
 </archetype-catalog>
