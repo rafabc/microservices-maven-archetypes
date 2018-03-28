@@ -7,7 +7,7 @@
             <groupId>com.archetypes</groupId>
             <artifactId>archetype-zuul</artifactId>
             <version>5.0.0</version>
-            <repository>https://github.com/rafabc/microservices-maven-archetypes/archetype-zuul</repository>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-zuul</repository>
             <description>Archetype Neflix OSS Zull</description>
         </archetype>
     </archetypes>
