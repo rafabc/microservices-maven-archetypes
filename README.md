@@ -32,6 +32,6 @@ To install the archetype in local execute the following commands:
 
 ```bash
     git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes
+    cd microservices-maven-archetypes/archetype-zuul
     mvn clean install
 ```
