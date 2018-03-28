@@ -1,4 +1,4 @@
-# microservices-maven-archetypes
+microservices-maven-archetypes
 ======================================
 
 Summary
@@ -25,7 +25,7 @@ Create a project zuul
         -DgroupId=com.micro \
         -DartifactId=zuul \
         -Dversion=1.0-SNAPSHOT \
-     
+```
 	 
 
 To install the archetype in local execute the following commands:
