@@ -13,6 +13,9 @@ spring:
 
 
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
       defaultZone: http://${eureka-host}:${eureka-port}/eureka

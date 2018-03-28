@@ -1,19 +1,22 @@
 server:
-  port: 9092
+  port: ${zuul-port}
 management:
   port: 9094
   ssl:
     enabled: false
 zuul:
   routes:
-    car-service:
-      path: /graphql/**
-      serviceId: graphql
+    example-service:
+      path: /service/**
+      serviceId: serviceid
  
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
-      defaultZone: http://localhost:2222/eureka
+      defaultZone: http://${eureka-host}:${eureka-port}/eureka
     healthcheck:
       enabled: true
     lease:

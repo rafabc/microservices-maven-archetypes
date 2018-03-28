@@ -1,15 +1,13 @@
-<archetype-descriptor name="spring-mvc-quickstart"
+<archetype-descriptor name="archetype-zuul"
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
-
+	
 	<requiredProperties>
-		<requiredProperty key="config-server-port" />
-		<requiredProperty key="eureka-host" />
-		<requiredProperty key="eureka-port" />
-		<requiredProperty key="zuul-port" />
-		<requiredProperty key="spring-boot-admin-port" />
-	</requiredProperties>
+        <requiredProperty key="config-server-host"/>
+        <requiredProperty key="config-server-port"/>
+    </requiredProperties>
+    
 	<fileSets>
 		<fileSet filtered="true" packaged="true">
 			<directory>src/main/java</directory>
