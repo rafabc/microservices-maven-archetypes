@@ -1,0 +1,24 @@
+ #set( $dollar = '$' )
+server:
+    port: 2222
+   
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    
+    statusPageUrlPath: ${dollar}{management.contextPath}/info
+    healthCheckUrlPath: ${dollar}{management.contextPath}/health
+    metadataMap:
+      instanceId: ${dollar}{vcap.application.instance_id:${dollar}{spring.application.name}:${dollar}{spring.application.instance_id:${dollar}{server.port}}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka/   #necesary to eureka dont try to config peer zone in 8761 por by default
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0   
+    
+    
+
+#spring.boot.admin.url: http://localhost:3333               

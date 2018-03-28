@@ -1,0 +1,27 @@
+#info:
+#  #scm-url: @scm.url@
+#  stage: test
+#
+#logging:
+#  file: target/boot-admin-sample.log
+
+server:
+  port: 3333
+  
+#spring:
+#  boot:
+#    admin:
+#      url: http://localhost:4444
+
+#endpoints:
+#  health:
+#    sensitive: false
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5 

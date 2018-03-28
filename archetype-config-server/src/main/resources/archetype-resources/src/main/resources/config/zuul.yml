@@ -1,0 +1,20 @@
+server:
+  port: 9092
+management:
+  port: 9094
+  ssl:
+    enabled: false
+zuul:
+  routes:
+    car-service:
+      path: /graphql/**
+      serviceId: graphql
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5 
