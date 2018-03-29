@@ -17,5 +17,12 @@
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-eureka</repository>
             <description>Archetype Neflix OSS Eureka</description>
         </archetype>
+		<archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-springbootadmin</artifactId>
+            <version>5.0.0</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-springbootadmin</repository>
+            <description>Archetype Spring Boot Admin</description>
+        </archetype>
     </archetypes>
 </archetype-catalog>

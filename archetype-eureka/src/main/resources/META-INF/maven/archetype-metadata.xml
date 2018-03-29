@@ -4,8 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
 	
 	<requiredProperties>
-        <requiredProperty key="config-server-host"/>
-        <requiredProperty key="config-server-port"/>
+        <requiredProperty key="config-server-host">
+        	<defaultValue>localhost</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="config-server-port">
+        	<defaultValue>1111</defaultValue>
+        </requiredProperty>
     </requiredProperties>
     
 	<fileSets>
