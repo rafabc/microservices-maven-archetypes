@@ -3,7 +3,7 @@ microservices-maven-archetypes
 
 Summary
 -------
-Catalog of maven microservices archetypes to simplify its creation
+Catalog of maven archetypes for microservices to simplify its creation
 
 
 
