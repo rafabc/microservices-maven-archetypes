@@ -1,9 +1,5 @@
-###INCLUDE THIS FILE IN CONFIG SERVER REPOSITORY
-
 server:
-  port: ${microservice-port}
-
- 
+  port: ${zipkin-port}
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
@@ -16,5 +12,4 @@ eureka:
     lease:
       duration: 5
       
-spring.sleuth.sampler.percentage: 1.0
-spring.sleuth.web.skipPattern: (^cleanup.*)          
+      
