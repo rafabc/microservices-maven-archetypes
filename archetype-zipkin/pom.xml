@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.archetypes</groupId>
-  <artifactId>archetype-zipkin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>archetye-zipkin</name>
-  <description>Archetype for create zipkin server</description>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.archetypes</groupId>
+	<artifactId>archetype-zipkin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>archetye-zipkin</name>
+	<description>Archetype for create zipkin server</description>
+	<packaging>maven-archetype</packaging>	
 
 
 	<properties>

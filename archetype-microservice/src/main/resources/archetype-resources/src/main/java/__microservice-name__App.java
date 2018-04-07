@@ -29,6 +29,7 @@ import zipkin.Span;
 
 
 @SpringBootApplication
+//@EnableDiscoveryClient //dont needed to be discovered by zuul
 @EnableWebMvc
 @EnableEurekaClient
 @Configuration
@@ -72,12 +73,10 @@ public class ${name}App {
 	        public void report(Span span) {
 	  
 	            InstanceInfo instance = eurekaClient.getNextServerFromEureka("zipkin", false);
-	            if (!(baseUrl != null && instance.getHomePageUrl().equals(baseUrl))) {
-	                baseUrl = instance.getHomePageUrl();
-	                delegate = new HttpZipkinSpanReporter(baseUrl, zipkinProperties.getFlushInterval(), zipkinProperties.getCompression().isEnabled(), spanMetricReporter);
+	            baseUrl = instance.getHomePageUrl();
+	            delegate = new HttpZipkinSpanReporter(baseUrl, zipkinProperties.getFlushInterval(), zipkinProperties.getCompression().isEnabled(), spanMetricReporter);
 	  
-	                if (!span.name.matches(skipPattern)) delegate.report(span);
-	            }
+	            if (!span.name.matches(skipPattern)) delegate.report(span);
 	        }
 	    };
 	}
