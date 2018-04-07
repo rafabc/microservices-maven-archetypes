@@ -18,7 +18,10 @@ eureka:
     fetchRegistry: false
   server:
     waitTimeInMsWhenSyncEmpty: 0  
-    enableSelfPreservation: false
+    enableSelfPreservation: true
+    
+eureka.server.renewalPercentThreshold: 10
+eureka.instance.leaseRenewalIntervalInSeconds: 5      
     
     
 
