@@ -14,7 +14,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka-host}:${eureka-port}/eureka/   #necesary to eureka dont try to config peer zone in 8761 por by default
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
   server:
     waitTimeInMsWhenSyncEmpty: 0  

@@ -7,8 +7,8 @@ management:
 zuul:
   routes:
     example-service:
-      path: /service/**
-      serviceId: serviceid
+      #path: /service/**
+      #serviceId: serviceid
  
 eureka:
   instance:
