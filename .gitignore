@@ -1,4 +1,7 @@
 *.class
+**/.settings
+**/.classpath
+**/.project
 .metadata/
 .recommenders/
 RemoteSystemsTempFiles/
