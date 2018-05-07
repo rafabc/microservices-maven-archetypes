@@ -23,34 +23,30 @@
 			<defaultValue>5555</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="microservice-name">
-			  <defaultValue>${artifactId.replaceAll("^a|-a", "A").replaceAll("^b|-b", "B").replaceAll("^c|-c", "C").replaceAll("^d|-d", "D").replaceAll("^e|-e", "E").replaceAll("^f|-f", "F").replaceAll("^g|-g", "G").replaceAll("^h|-h", "H").replaceAll("^i|-i", "I").replaceAll("^j|-j", "J").replaceAll("^k|-k", "K").replaceAll("^l|-l", "L").replaceAll("^m|-m", "M").replaceAll("^n|-n", "N").replaceAll("^o|-o", "O").replaceAll("^p|-p", "P").replaceAll("^q|-q", "Q").replaceAll("^r|-r", "R").replaceAll("^s|-s", "S").replaceAll("^t|-t", "T").replaceAll("^u|-u", "U").replaceAll("^v|-v", "V").replaceAll("^w|-w", "W").replaceAll("^x|-x", "X").replaceAll("^y|-y", "Y").replaceAll("^z|-z", "Z")}</defaultValue>
+			  <defaultValue>${artifactId}</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="microservice-mapping"/>
 	</requiredProperties>
 
 	<fileSets>
-		<fileSet filtered="true" packaged="true">
-			<directory>src/main/java</directory>
+		<fileSet filtered="true" packaged="false">
+			<directory>src</directory>
 			<includes>
-				<include>**/*.java</include>
+				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>src/test/java</directory>
+		<fileSet filtered="false" packaged="false">
+			<directory>node_modules</directory>
 			<includes>
-				<include>**/*.java</include>
+				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>src/main/resources</directory>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>src/test/resources</directory>
-		</fileSet>
-		<fileSet filtered="false">
 			<directory></directory>
 			<includes>
 				<include>.gitignore</include>
+				<include>package.json</include>
+				<include>__microservice-name__.yml</include>
 			</includes>
 		</fileSet>
 	</fileSets>

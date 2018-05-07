@@ -29,14 +29,14 @@
     "http"
   ],
   "paths": {
-    "/${request-mapping}": {
+    "/${microservice-mapping}": {
       "get": {
         "tags": [
           "micro"
         ],
-        "summary": "${microservice-name}",
+        "summary": "${microservice-mapping}",
         "description": "detail for ${microservice-name} in node bak",
-        "operationId": "${request-mapping}",
+        "operationId": "${microservice-mapping}",
         "produces": [
           "application/json"
         ],

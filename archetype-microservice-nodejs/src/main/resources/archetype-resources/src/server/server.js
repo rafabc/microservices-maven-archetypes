@@ -1,7 +1,7 @@
 
 const express = require('express');
 const helmet = require('helmet');
-const api = require('../api/micro');
+const api = require('../api/${microservice-name}');
 const config = require('../config');
 const eureka = require('./eureka');
 
@@ -10,7 +10,7 @@ const swaggerDocument = require('../api/swagger.json');
 
 const expressMiddleware = require('zipkin-instrumentation-express').expressMiddleware
 const zipkin = require ('./zipkin');
-const serviceName = 'nodeservice';
+const serviceName = '${microservice-name}';
 const msg = require('../utils/messages');
 
 const start = () => {
@@ -52,7 +52,11 @@ const start = () => {
 }
 
 function exitHandler(options, err) {
-    eureka.stop();
+    try{
+    	eureka.stop();
+	}catch(e){
+		msg.box("error closing eureka:" + e);
+	}
     process.exit(1);
 }
 

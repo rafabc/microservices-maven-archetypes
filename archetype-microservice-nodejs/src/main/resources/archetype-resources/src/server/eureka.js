@@ -28,7 +28,7 @@ module.exports = {
                 '$': port,
                 '@enabled': true
           },
-          vipAddress: 'nodeservice',
+          vipAddress: '${microservice-name}',
           statusPageUrl: 'http://localhost:' + port + data.statusPage,
           homePageUrl: 'http://localhost:' + port + data.homePage,
           healthCheckUrl: 'http://localhost:' + port + data.healthPage,

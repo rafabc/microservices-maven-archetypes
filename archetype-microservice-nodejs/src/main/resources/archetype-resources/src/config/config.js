@@ -8,7 +8,7 @@ module.exports = {
 
   getPort: function(callback) {
     fp(3000).then(([freep]) => {
-        msg.line('port free to be used: ' + freep);
+        msg.line('node port free to be used: ' + freep);
         callback(freep);
     }).catch((err)=>{
         console.error(err);
@@ -18,7 +18,7 @@ module.exports = {
   getEurekaConfig: function(callback) {
 
     client.load({
-        application: "micro",
+        application: "${microservice-name}",
         endpoint: "http://${config-server-host}:${config-server-port}"
 
     }).then((config) => {
@@ -39,14 +39,17 @@ module.exports = {
 
         // Using a prefix, this is equivalent to .get("this.is.another.key");
         //const value2 = config.get("this.is", "another.key");
+    }).catch((error) => {
+        msg.box("error recoverign eureka config from config-server");
+        msg.box(error);
     });
 
   },
 
   getZipkinConfig: function(callback) {
     client.load({
-        application: "micro",
-        endpoint: "http://localhost:1111"
+        application: "${microservice-name}",
+        endpoint: "http://${config-server-host}:${config-server-port}"
 
     }).then((config) => {
 
@@ -56,6 +59,9 @@ module.exports = {
           path: config.get("zipkin.server.path"),
         }
         callback(zipkin);
+    }).catch((error) => {
+        msg.box("error recoverign zipkin config from config-server");
+        msg.box(error);
     });
   }
 
