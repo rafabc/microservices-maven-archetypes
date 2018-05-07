@@ -3,6 +3,8 @@ server:
   port: ${spring-boot-admin-port}
     
 eureka:
+  instance:
+    preferIpAddress: false
   client:
     serviceUrl:
       defaultZone: http://${eureka-host}:${eureka-port}/eureka

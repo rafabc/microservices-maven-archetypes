@@ -1,0 +1,18 @@
+
+ #THIS FILE MUST BE REALOCATED IN CONFIG-SERVER
+ 
+eureka.server.port: ${eureka-port}
+eureka.server.host: ${eureka-host}
+eureka.service.path: '/eureka/apps/'
+eureak.use.metadata: true     
+
+eureka.instance.app: '${microservice-name}'
+eureka.instance.vip.address: '${microservice-name}'
+eureka.instance.status.page: '/info'
+eureka.instance.home.page: '/'
+eureka.instance.health.page: '/health'
+
+
+zipkin.server.host: http://${zipkin-host}
+zipkin.server.port: ${zipkin-port}
+zipkin.server.path: '/api/v1/spans'

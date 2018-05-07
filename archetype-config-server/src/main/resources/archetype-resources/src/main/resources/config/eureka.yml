@@ -5,7 +5,7 @@ server:
 eureka:
   instance:
     hostname: ${eureka-host}
-    prefer-ip-address: true
+    preferIpAddress: false
     
     statusPageUrlPath: ${dollar}{management.contextPath}/info
     healthCheckUrlPath: ${dollar}{management.contextPath}/health
@@ -16,13 +16,10 @@ eureka:
       defaultZone: http://${eureka-host}:${eureka-port}/eureka/   #necesary to eureka dont try to config peer zone in 8761 por by default
     registerWithEureka: true
     fetchRegistry: false
+    preferIpAddress: false
   server:
     waitTimeInMsWhenSyncEmpty: 0  
     enableSelfPreservation: true
     
 eureka.server.renewalPercentThreshold: 10
-eureka.instance.leaseRenewalIntervalInSeconds: 5      
-    
-    
-
-#spring.boot.admin.url: http://localhost:3333               
+eureka.instance.leaseRenewalIntervalInSeconds: 5               

@@ -1,0 +1,55 @@
+{
+  "name": "${microservice-name}",
+  "version": "${version}",
+  "description": "@@description",
+  "author": "Rafael Blanco Cordero",
+  "license": "MIT",
+  "main": "index.js",
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "mock"
+    ]
+  },
+  "scripts": {
+    "test": "mocha -R spec src/**/*.spec.js",
+    "start": "node src/index.js",
+    "lint": "standard --verbose | snazzy",
+    "node-debug": "DEBUG=express* node src/index.js",
+    "chrome-debug": "node --debug-brk --inspect src/index.js"
+  },
+  "keywords": [
+    "express",
+    "docker",
+    "microservice"
+  ],
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0",
+    "supertest": "^2.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cloud-config-client": "1.3.1",
+    "swagger-ui-express": "3.0.8",
+    "find-free-port": "1.2.0",
+    "eureka-js-client": "4.4.1",
+    "express": "^4.14.0",
+    "helmet": "^3.4.0",
+    "http-status": "^0.2.5",
+    "morgan": "^1.7.0",
+    "ip": "1.1.5",
+    "zipkin": "^0.11.1",
+    "zipkin-context-cls": "^0.11.0",
+    "zipkin-instrumentation-cujojs-rest": "^0.11.1",
+    "zipkin-instrumentation-express": "^0.11.1",
+    "zipkin-instrumentation-fetch": "^0.11.1",
+    "zipkin-transport-http": "^0.11.1"
+
+  }
+}

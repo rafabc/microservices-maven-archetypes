@@ -1,5 +1,6 @@
 *.class
 **/.settings
+**/node_modules
 **/.classpath
 **/.project
 .metadata/
