@@ -5,6 +5,9 @@ Summary
 -------
 Catalog of maven archetypes for microservices to simplify its creation
 
+Ecosystem result
+-------
+![Alt text](docs/archetypes.jpg?raw=true "Ecosystem")
 
 
 

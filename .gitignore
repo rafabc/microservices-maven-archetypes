@@ -3,6 +3,7 @@
 **/node_modules
 **/.classpath
 **/.project
+**/.mvn
 .metadata/
 .recommenders/
 RemoteSystemsTempFiles/
@@ -19,3 +20,4 @@ target
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+**/mvnw*
