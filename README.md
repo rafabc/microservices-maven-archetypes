@@ -52,10 +52,10 @@ git clone https://github.com/rafabc/microservices-maven-archetypes.git
 
 Creation projects instructions
 ---
-[Spring Cloud Config Server](./archetype-config-server/README.md)
-[Eureka](./archetype-eureka/README.md)
-[Spring Boot Admin](./archetype-springbootadmin/README.md)
-[Zuul](./archetype-zuul/README.md)
+[Spring Cloud Config Server](./archetype-config-server/)
+[Eureka](./archetype-eureka/)
+[Spring Boot Admin](./archetype-springbootadmin/)
+[Zuul](./archetype-zuul/)
 
 
 
