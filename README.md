@@ -3,13 +3,7 @@ microservices-maven-archetypes
 
 Summary
 -------
-Catalog of maven archetypes for microservices to simplify its creation
-
-Ecosystem result
--------
-![Alt text](docs/archetypes.jpg?raw=true "Ecosystem")
-
-
+Catalog of maven archetypes for microservices to simplify its creation.
 
 Prerequisites
 -------------
@@ -17,72 +11,54 @@ Prerequisites
 - JDK 8
 - Maven 3
 
-Create a project Spring Cloud Config Server
-----------------
+Ecosystem result
+-------
+![Alt text](docs/archetypes.jpg?raw=true "Ecosystem")
 
+
+
+
+
+General installation instructions
+-------------
+Two installation ways:
+
+### Local
+
+1. Clone repository
 ```bash
-    mvn archetype:generate \
-        -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-config-server \
-        -DarchetypeVersion=0.0.1 \
-        -DgroupId=com.micro \
-        -DartifactId=configserver \
-        -Dversion=1.0-SNAPSHOT \
+git clone https://github.com/rafabc/microservices-maven-archetypes.git
 ```
-	 
-
-To install the archetype in local execute the following commands:
-
+2. In console go to each archetype path
 ```bash
-    git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-config-server
-    mvn clean install
+cd microservices-maven-archetypes/[archetype-path]
 ```
-
-Create a project Eureka
-----------------
-
+3. run next commands
 ```bash
-    mvn archetype:generate \
-        -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-eureka \
-        -DarchetypeVersion=0.0.1 \
-        -DgroupId=com.micro \
-        -DartifactId=eureka \
-        -Dversion=1.0-SNAPSHOT \
-```
-	
-`If you have clone the repository before you can ommit the clone step`
-
-To install the archetype in local execute the following commands:
-
-```bash
-    git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-eureka
-    mvn clean install
+mvn install 	#for each archetype
+mvn install archetype:update-local-catalog
+mvn archetype:crawl
 ```
 
-Create a project Spring Boot Admin
-----------------
+### Hosted
 
+1. Clone repository
 ```bash
-    mvn archetype:generate \
-        -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-springbootadmin \
-        -DarchetypeVersion=5.0.0 \
-        -DgroupId=com.micro \
-        -DartifactId=springbootadmin \
-        -Dversion=1.0-SNAPSHOT \
+git clone https://github.com/rafabc/microservices-maven-archetypes.git
 ```
-	 
+2. Install the archetypes in your maven repository
+3. This repository provide a catalog file, with it you can update your hosted catalog and then use it where you want.
 
-To install the archetype in local execute the following commands:
 
-```bash
-    git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-springbootadmin
-    mvn clean install
-```
+Creation projects instructions
+---
+[Spring Cloud Config Server](./archetype-config-server/README.md)
+[Eureka](./archetype-eureka/README.md)
+[Spring Boot Admin](./archetype-springbootadmin/README.md)
+[Zuul](./archetype-zuul/README.md)
+
+
+
 
 
 Create a project zuul
