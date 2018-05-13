@@ -30,4 +30,4 @@ Create a project Zipkin
 ```
 
 Once you have ready your microservices its posible to see the traces in next url:
-- <http:[zipkin-host]:[zipkin-port]>
+- <http://[zipkin-host]:[zipkin-port]>

@@ -31,10 +31,10 @@ Create a project microservices
 The generated project contain and yml config file, this file is necesary to put in config-server to get the configuration from config-server
 
 After run the microservice you can view integration with Swagger in:
-- <http:[microservice-host]:[microservice-port]/api/swagger-ui.html>
+<br><http://[microservice-host]:[microservice-port]/api/swagger-ui.html>
 
 Microservice archetype contain one example get method:
-- <http:[microservice-host]:[microservice-port]/[service-name]/[mapping-name]/id/[number]>
+<br><http://[microservice-host]:[microservice-port]/[service-name]/[mapping-name]/id/[number]>
 
 if you execute the method you can see the latency data in zipkin:
-- <http:[zipkin-host]:[zipkin-port]>
+<br><http://[zipkin-host]:[zipkin-port]>
