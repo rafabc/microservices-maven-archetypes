@@ -1,9 +1,10 @@
-Zuul rchetype
+Swagger catalog archetypes
 ======================================
 
 Summary
 -------
-With this archetype its posible to create a Zuul Edge Service project pre-configured for integrate with Spring-Cloud-Config and Eureka.
+With this archetype its posible to create a Swagger Catalog project pre-configured for integrate with Spring-Cloud-Config and Eureka.
+Swagger Catalog offer a central point where consult all Swagger services.
 
 Install the archetype
 -------------
@@ -11,27 +12,19 @@ To install the archetype in local execute the following commands:
 
 ```bash
     git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-zuul
+    cd microservices-maven-archetypes/archetype-swagger-catalog
     mvn clean install
-	mvn install archetype:update-local-catalog
 ```
 
-
-Create a project zuul
+Create a project Swagger Catalog
 ----------------
 
 ```bash
     mvn archetype:generate \
         -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-zuul \
+        -DarchetypeArtifactId=archetype-swagger-catalog \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=zuul \
+        -DartifactId=swagger-catalog \
         -Dversion=0.0.1-SNAPSHOT \
 ```
-	 
-
-
-
-You can use the next url to see what service are available to comunicate with Zuul Service:
-<http://localhost:9094/routes>
