@@ -18,10 +18,10 @@ Install the archetype
 To install the archetype in local execute the following commands:
 
 ```bash
-    git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-config-server
-    mvn clean install
-	mvn install archetype:update-local-catalog
+git clone https://github.com/rafabc/microservices-maven-archetypes.git
+cd microservices-maven-archetypes/archetype-config-server
+mvn clean install
+mvn install archetype:update-local-catalog
 ```
 
 Create a project Spring Cloud Config Server

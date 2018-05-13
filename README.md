@@ -3,7 +3,8 @@ microservices-maven-archetypes
 
 Summary
 -------
-Catalog of maven archetypes for microservices to simplify its creation.
+Catalog of maven archetypes to develop microservices simplifying their creation and preconfigured to integrate directly with the tools Zuul, 
+Eureka, Spring Boot Admin, Swagger, Zipkin and Spring Cloud Config.
 
 Prerequisites
 -------------
@@ -33,9 +34,12 @@ git clone https://github.com/rafabc/microservices-maven-archetypes.git
 ```bash
 cd microservices-maven-archetypes/[archetype-path]
 ```
-3. run next commands
+3. run next mvn install for each archetype
 ```bash
 mvn install 	#for each archetype
+```
+4. After install all archetypes update the catalog
+```bash
 mvn install archetype:update-local-catalog
 mvn archetype:crawl
 ```
