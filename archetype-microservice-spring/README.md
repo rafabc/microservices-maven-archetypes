@@ -26,6 +26,8 @@ Create a project spring boot microservice
         -DgroupId=com.micro \
         -DartifactId=yourid \
         -Dversion=0.0.1-SNAPSHOT \
+		-Dmicroservice-mappin=yourmapping \
+		-Dmicroservice-name=youmicroname
 ```
 
 The generated project contain and yml config file, this file is necesary to put in config-server to get the configuration from config-server

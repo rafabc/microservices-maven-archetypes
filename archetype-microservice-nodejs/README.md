@@ -21,11 +21,13 @@ Create a project microservices
 ```bash
     mvn archetype:generate \
         -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-microservices \
+        -DarchetypeArtifactId=archetype-microservices-nodejs \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=yourid \
+        -DartifactId=yourmicronodeid \
         -Dversion=0.0.1-SNAPSHOT \
+		-Dmicroservice-mappin=yourmapping \
+		-Dmicroservice-name=youmicroname
 ```
 
 The generated project contain and yml config file, this file is necesary to put in config-server to get the configuration from config-server

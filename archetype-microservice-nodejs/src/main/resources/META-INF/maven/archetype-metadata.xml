@@ -20,7 +20,7 @@
 			<defaultValue>localhost</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="zipkin-port">
-			<defaultValue>5555</defaultValue>
+			<defaultValue>4444</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="microservice-name">
 			  <defaultValue>${artifactId}</defaultValue>

@@ -25,6 +25,7 @@ Create a project Swagger Catalog
         -DarchetypeArtifactId=archetype-swagger-catalog \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=yourid \
+        -DartifactId=yourswaggerid \
         -Dversion=0.0.1-SNAPSHOT \
+		-Dswagger-catalog-port=5555
 ```

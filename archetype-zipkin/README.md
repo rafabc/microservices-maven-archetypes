@@ -25,8 +25,8 @@ Create a project Zipkin
         -DarchetypeArtifactId=archetype-zipkin \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=yourid \
-        -Dversion=0.0.1-SNAPSHOT \
+        -DartifactId=yourzipkinid \
+        -Dversion=0.0.1-SNAPSHOT
 ```
 
 Once you have ready your microservices its posible to see the traces in next url:

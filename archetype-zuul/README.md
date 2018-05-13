@@ -27,7 +27,7 @@ Create a project zuul
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
         -DartifactId=zuul \
-        -Dversion=0.0.1-SNAPSHOT \
+        -Dversion=0.0.1-SNAPSHOT
 ```
 	 
 

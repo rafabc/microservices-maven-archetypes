@@ -33,7 +33,7 @@ Create a project Spring Boot Admin
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
         -DartifactId=springbootadmin \
-        -Dversion=1.0-SNAPSHOT \
+        -Dversion=0.0.1-SNAPSHOT
 ```
 
 
