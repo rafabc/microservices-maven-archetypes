@@ -60,4 +60,4 @@ Instructions for creating projects
 - [Swagger Catalog](./archetype-swagger-catalog/)
 - [Zipkin](./archetype-zipkin/)
 - [Spring microservice](./archetype-microservice-spring/)
-- [Nocejs microservice](./archetype-microservice-node/)
+- [Nocejs microservice](./archetype-microservice-nodejs/)
