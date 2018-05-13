@@ -34,7 +34,8 @@ After run the microservice you can view integration with Swagger in:
 <br><http://[microservice-host]:[microservice-port]/api/swagger-ui.html>
 
 Microservice archetype contain one example get method:
-<br><http://[microservice-host]:[microservice-port]/[service-name]/[mapping-name]/id/[number]>
+<br><http://[microservice-host]:[microservice-port]/[mapping-name]/id/[number]> or
+<br><http://[zuul-host]:[zuul-port]/[service-name]/[mapping-name]/id/[number]>
 
 if you execute the method you can see the latency data in zipkin:
 <br><http://[zipkin-host]:[zipkin-port]>

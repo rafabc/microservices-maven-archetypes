@@ -17,9 +17,6 @@ Ecosystem result
 ![Alt text](docs/archetypes.jpg?raw=true "Ecosystem")
 
 
-
-
-
 General installation instructions
 -------------
 Two installation ways:
@@ -54,12 +51,13 @@ git clone https://github.com/rafabc/microservices-maven-archetypes.git
 3. This repository provide a catalog file, with it you can update your hosted catalog and then use it where you want.
 
 
-Creation projects instructions
----
+Instructions for creating projects
+------
 - [Spring Cloud Config Server](./archetype-config-server/)
 - [Eureka](./archetype-eureka/)
 - [Spring Boot Admin](./archetype-springbootadmin/)
 - [Zuul](./archetype-zuul/)
-- [Spring microservice](./archetype-microservice-spring/)
 - [Swagger Catalog](./archetype-swagger-catalog/)
 - [Zipkin](./archetype-zipkin/)
+- [Spring microservice](./archetype-microservice-spring/)
+- [Nocejs microservice](./archetype-microservice-node/)
