@@ -61,3 +61,5 @@ Creation projects instructions
 - [Spring Boot Admin](./archetype-springbootadmin/)
 - [Zuul](./archetype-zuul/)
 - [Spring microservice](./archetype-microservice-spring/)
+- [Swagger Catalog](./archetype-swagger-catalog/)
+- [Zipkin](./archetype-zipkin/)

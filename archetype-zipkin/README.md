@@ -12,20 +12,20 @@ To install the archetype in local execute the following commands:
 
 ```bash
     git clone https://github.com/rafabc/microservices-maven-archetypes.git
-    cd microservices-maven-archetypes/archetype-swagger-catalog
+    cd microservices-maven-archetypes/archetype-zipkin
     mvn clean install
 ```
 
-Create a project Swagger Catalog
+Create a project Zipkin
 ----------------
 
 ```bash
     mvn archetype:generate \
         -DarchetypeGroupId=com.archetypes \
-        -DarchetypeArtifactId=archetype-swagger-catalog \
+        -DarchetypeArtifactId=archetype-zipkin \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=swagger-catalog \
+        -DartifactId=yourid \
         -Dversion=0.0.1-SNAPSHOT \
 ```
 
