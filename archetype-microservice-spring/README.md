@@ -26,7 +26,7 @@ Create a project spring boot microservice
         -DgroupId=com.micro \
         -DartifactId=yourid \
         -Dversion=0.0.1-SNAPSHOT \
-		-Dmicroservice-mappin=yourmapping \
+		-Dmicroservice-mapping=yourmapping \
 		-Dmicroservice-name=youmicroname
 ```
 

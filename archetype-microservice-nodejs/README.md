@@ -26,7 +26,7 @@ Create a project microservices
         -DgroupId=com.micro \
         -DartifactId=yourmicronodeid \
         -Dversion=0.0.1-SNAPSHOT \
-		-Dmicroservice-mappin=yourmapping \
+		-Dmicroservice-mapping=yourmapping \
 		-Dmicroservice-name=youmicroname
 ```
 

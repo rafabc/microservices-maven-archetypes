@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Zipkin" version="4">
+  <OBJECT>
+    <ID name="Zipkin" mc="Standard.Package" uid="1548270f-a166-441d-ad70-3b366b9a88ea"/>
+    <PID name="Components" mc="Standard.Package" uid="aab315f4-72da-453d-97cf-e8879f5f4b12"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Zipkin]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Zipkin" mc="Standard.Component" uid="4152df41-b744-474b-9dde-e47dfed672b1"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

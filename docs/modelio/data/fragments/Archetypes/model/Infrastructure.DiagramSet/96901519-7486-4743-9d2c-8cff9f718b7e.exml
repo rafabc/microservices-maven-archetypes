@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Archetypes" version="4">
+  <OBJECT>
+    <ID name="Archetypes" mc="Infrastructure.DiagramSet" uid="96901519-7486-4743-9d2c-8cff9f718b7e"/>
+    <PID name="Archetypes" mc="Standard.Project" uid="02154615-6b05-43d9-9070-50b096b3834e"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Archetypes]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

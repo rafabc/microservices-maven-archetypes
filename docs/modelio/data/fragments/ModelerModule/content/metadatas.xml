@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<ram-component manifest-version="2.0.02" name="ModelerModule" version="8" release="8" clevel="10" modelioVersion="3.7.00" provider="Module ModelerModule">
+  <description><![CDATA[]]></description>
+  <dependencies></dependencies>
+  <contributors></contributors>
+  <metamodels>
+    <metamodel name="Infrastructure" version="2.1.00"/>
+  </metamodels>
+  <roots>
+    <root metaclass="Infrastructure.ModuleComponent" name="ModelerModule" uuid="00000000-0000-2710-0000-000000000000"/>
+  </roots>
+</ram-component>

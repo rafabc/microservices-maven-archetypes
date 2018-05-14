@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="" version="4">
+  <OBJECT>
+    <ID name="" mc="Infrastructure.MetaclassReference" uid="37b2743f-e1e1-49d0-93c3-8c5752f57a6f"/>
+    <PID name="Analyst" mc="Infrastructure.Profile" uid="9e9e0964-7263-4be8-a79a-7ff19f54df6d"/>
+    <ATTRIBUTES>
+      <ATT name="ReferencedClassName"><![CDATA[Analyst.RiskContainer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedTable">
+        <COMPID name="Risk Properties" mc="Infrastructure.PropertyTableDefinition" uid="eb3dbc2d-8e8a-40e4-9f8c-3cfd64a04944"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

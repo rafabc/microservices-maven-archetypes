@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Spring-Boot-Admin" version="4">
+  <OBJECT>
+    <ID name="Spring-Boot-Admin" mc="Standard.Package" uid="33ce9652-b29e-4945-a76e-3aee31a832a6"/>
+    <PID name="Components" mc="Standard.Package" uid="aab315f4-72da-453d-97cf-e8879f5f4b12"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Spring-Boot-Admin]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Boot-Admin" mc="Standard.Component" uid="18071e2f-c12d-4c34-a700-db5b371e4241"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

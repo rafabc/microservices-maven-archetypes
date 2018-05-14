@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Archetypes" version="4">
+  <OBJECT>
+    <ID name="Archetypes" mc="Archimate.ArchimateProject" uid="53cef4b1-94dc-43f6-9ff9-a77d71b59ee9"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Archetypes]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="model">
+        <COMPID name="Model" mc="Archimate.Model" uid="167dc0b6-21f3-478b-a6b1-8df98c1d5a70"/>
+      </COMP>
+      <COMP relation="viewPoints">
+        <COMPID name="ViewPoint" mc="Archimate.ViewPoint" uid="3c79ddcf-37a7-468e-bafa-fa4ed4a82bd0"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

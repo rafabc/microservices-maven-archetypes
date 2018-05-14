@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Spring-Cloud-Config-Server" version="4">
+  <OBJECT>
+    <ID name="Spring-Cloud-Config-Server" mc="Standard.Package" uid="12b041db-5b6e-4762-bd2a-2461cbbe685e"/>
+    <PID name="Components" mc="Standard.Package" uid="aab315f4-72da-453d-97cf-e8879f5f4b12"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Spring-Cloud-Config-Server]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Config-Server" mc="Standard.Component" uid="551bf7ee-f25b-4dd8-96f4-0ea44904783a"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

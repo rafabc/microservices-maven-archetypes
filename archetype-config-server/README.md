@@ -34,7 +34,7 @@ Create a project Spring Cloud Config Server
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
         -DartifactId=configserver \
-        -Dversion=0.0.1	-SNAPSHOT \
+        -Dversion=0.0.1-SNAPSHOT \
 		-Dconfig-server-port=1111 \
 		-Deureka-port=2222 \
 		-Dspring-boot-admin-port=3333 \

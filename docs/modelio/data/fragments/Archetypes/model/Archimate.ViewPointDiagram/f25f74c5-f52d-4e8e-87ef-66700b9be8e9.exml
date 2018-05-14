@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ViewPointDiagram" version="4">
+  <OBJECT>
+    <ID name="ViewPointDiagram" mc="Archimate.ViewPointDiagram" uid="f25f74c5-f52d-4e8e-87ef-66700b9be8e9"/>
+    <PID name="ViewPoint" mc="Archimate.ViewPoint" uid="3c79ddcf-37a7-468e-bafa-fa4ed4a82bd0"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">0</ATT>
+      <ATT name="UiData"></ATT>
+      <ATT name="Name"><![CDATA[ViewPointDiagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

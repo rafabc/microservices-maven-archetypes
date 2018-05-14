@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Actors" version="4">
+  <OBJECT>
+    <ID name="Actors" mc="Standard.Package" uid="a73fde1e-9b0a-4bd1-bd87-0ebd3adace44"/>
+    <PID name="Archetypes" mc="Standard.Project" uid="02154615-6b05-43d9-9070-50b096b3834e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Actors]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Client" mc="Standard.Actor" uid="9f536b37-47c6-4a81-b6ae-368c0a914e63"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

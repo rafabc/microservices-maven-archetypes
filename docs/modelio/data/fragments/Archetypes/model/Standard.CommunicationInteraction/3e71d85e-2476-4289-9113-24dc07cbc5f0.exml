@@ -1,0 +1,570 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Communication diagram" version="4">
+  <OBJECT>
+    <ID name="Communication diagram" mc="Standard.CommunicationInteraction" uid="3e71d85e-2476-4289-9113-24dc07cbc5f0"/>
+    <PID name="Diagrams" mc="Standard.Package" uid="b4c5540c-cce6-4c86-bc38-85579dfebaa7"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Communication diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Owned">
+        <OBJECT>
+          <ID name="r1" mc="Standard.CommunicationNode" uid="3322d87d-83f9-441f-8e4a-78f1bcd408bf"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="zuul" mc="Standard.BindableInstance" uid="19d07f2d-8ba3-40b9-b362-f7d1986d3010"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="e8a25f12-8585-4c7e-a64c-2bf1ab3560e1"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send traces" mc="Infrastructure.Dependency" uid="3e4c845c-f35c-4d8e-ab28-019c74cd213b"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[send traces]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r5" mc="Standard.CommunicationNode" uid="ad3470cc-b198-481a-a1fe-5db1fab91936"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="1bcd2eae-bcca-4fa4-8d2b-1ed4ad01b9a2"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="App" mc="Standard.CommunicationNode" uid="6130bf84-81a0-4b54-be37-cf87cf0d6c04"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[App]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="App" mc="Standard.BindableInstance" uid="f15dfd89-fae2-4d0f-b822-a0cbfc7ed783"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r3]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="eureka" mc="Standard.BindableInstance" uid="2f904794-2e84-4b02-8baa-5808b7c589b1"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="a381e2ed-bcf4-4d91-9230-e1ffb1e207a3"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r4" mc="Standard.CommunicationNode" uid="0f7f087f-f56b-4e9b-83a3-90ef131ac71c"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r4]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="swagger" mc="Standard.BindableInstance" uid="6132d62d-b84f-4211-a69a-321304e4823d"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="50e2ceef-4be5-4c6a-b6f7-eb3cd79094d3"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="d4091a36-e9e7-4478-b835-cb45e3cfb034"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r5" mc="Standard.CommunicationNode" uid="ad3470cc-b198-481a-a1fe-5db1fab91936"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r5]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="zipkin" mc="Standard.BindableInstance" uid="d1b75d2c-9b67-4ef7-bf77-68c189570f90"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="8f802167-9860-43c8-9072-fde776cb36e9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="f467ad65-9a92-41dd-95d1-7e237428a45e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r6" mc="Standard.CommunicationNode" uid="205425ec-b27d-4a54-b117-40dc2a9d687a"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r6]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="m1" mc="Standard.BindableInstance" uid="e272332e-78a4-4ec4-82ef-4c0a9ce5401e"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="9b20d183-ab5d-43b0-b4e1-e8fdb0368bc9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send traces" mc="Infrastructure.Dependency" uid="de3df907-e9b9-4d60-8105-8a67a7bdb220"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[send traces]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r5" mc="Standard.CommunicationNode" uid="ad3470cc-b198-481a-a1fe-5db1fab91936"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="c5f40e21-0204-4a62-978c-41a7f535a1d3"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r7" mc="Standard.CommunicationNode" uid="1ddc296d-9c03-4cb9-ac5b-ef351c76f11f"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r7]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="m2" mc="Standard.BindableInstance" uid="ce87e4e0-6ac1-4f55-8d23-594124f3b7e5"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="653edf64-0c59-4a3d-803b-fbd5c1e8d1ee"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send traces" mc="Infrastructure.Dependency" uid="566fbeab-f1fc-42b2-b069-7fe784ba6d62"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[send traces]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r5" mc="Standard.CommunicationNode" uid="ad3470cc-b198-481a-a1fe-5db1fab91936"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="03960596-ae0b-4955-8917-1dace416a8bd"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r8" mc="Standard.CommunicationNode" uid="df6265d0-78b6-4c43-a55c-8952e050f4bd"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r8]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="bootadmin" mc="Standard.BindableInstance" uid="2295174e-1c8e-4285-80bf-5b3493e026dc"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="register" mc="Infrastructure.Dependency" uid="e2ecd7a5-75af-430a-b37f-60c4794799a3"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[register]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="33b0161f-89fb-4b04-9715-191da933424a"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r9" mc="Standard.CommunicationNode" uid="aef14548-220c-4b46-8cee-bcdfda8a8e49"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r9]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="configserver" mc="Standard.BindableInstance" uid="efe6937a-e201-4ba2-ba79-937d7b62c3be"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="recover config" mc="Infrastructure.Dependency" uid="6c8c66f5-547c-4713-94a6-3c59d236b6d4"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[recover config]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="r3" mc="Standard.CommunicationNode" uid="ae73e0c2-091c-4edb-b3f3-8b8f1def791c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Standard.Collaboration" uid="92e3f300-235d-496f-b7ba-54038c0b00fb"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Declared">
+              <OBJECT>
+                <ID name="zuul" mc="Standard.BindableInstance" uid="19d07f2d-8ba3-40b9-b362-f7d1986d3010"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[zuul]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Zuul" mc="Standard.Component" uid="c15f33de-3769-4feb-b501-2e45bb600dbc"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="App" mc="Standard.BindableInstance" uid="f15dfd89-fae2-4d0f-b822-a0cbfc7ed783"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[App]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Client" mc="Standard.Actor" uid="9f536b37-47c6-4a81-b6ae-368c0a914e63"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="eureka" mc="Standard.BindableInstance" uid="2f904794-2e84-4b02-8baa-5808b7c589b1"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[eureka]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Eureka" mc="Standard.Component" uid="2f06e8d1-a4fc-427c-8aaf-ba568f47005e"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="swagger" mc="Standard.BindableInstance" uid="6132d62d-b84f-4211-a69a-321304e4823d"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[swagger]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Swagger-Catalog" mc="Standard.Component" uid="99315a1d-d671-4019-824b-ad764bd6db13"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="zipkin" mc="Standard.BindableInstance" uid="d1b75d2c-9b67-4ef7-bf77-68c189570f90"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[zipkin]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Zipkin" mc="Standard.Component" uid="4152df41-b744-474b-9dde-e47dfed672b1"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="m1" mc="Standard.BindableInstance" uid="e272332e-78a4-4ec4-82ef-4c0a9ce5401e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[m1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Micro-Spring" mc="Standard.Component" uid="4badffe9-a400-4077-888e-1f9a03921f59"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="m2" mc="Standard.BindableInstance" uid="ce87e4e0-6ac1-4f55-8d23-594124f3b7e5"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[m2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Micro-Node" mc="Standard.Component" uid="8c60595c-172b-4a46-b193-4d831fb79991"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="bootadmin" mc="Standard.BindableInstance" uid="2295174e-1c8e-4285-80bf-5b3493e026dc"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[bootadmin]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Boot-Admin" mc="Standard.Component" uid="18071e2f-c12d-4c34-a700-db5b371e4241"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="configserver" mc="Standard.BindableInstance" uid="efe6937a-e201-4ba2-ba79-937d7b62c3be"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[configserver]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Config-Server" mc="Standard.Component" uid="551bf7ee-f25b-4dd8-96f4-0ea44904783a"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Communication Interaction Communication diagram" mc="Standard.CommunicationDiagram" uid="8b297aa4-25a9-434d-b82d-5440419dcf6f"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

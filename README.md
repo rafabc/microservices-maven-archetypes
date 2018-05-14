@@ -61,3 +61,8 @@ Instructions for creating projects
 - [Zipkin](./archetype-zipkin/)
 - [Spring microservice](./archetype-microservice-spring/)
 - [Nodejs microservice](./archetype-microservice-nodejs/)
+
+
+Automotion
+-------
+If all archetypes are installed yet, its posible use mvn-create-projects.sh to create fast all environmet projects and test it.

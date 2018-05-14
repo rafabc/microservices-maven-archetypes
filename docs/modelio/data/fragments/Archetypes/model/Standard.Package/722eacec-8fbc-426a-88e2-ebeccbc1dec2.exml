@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Eureka" version="4">
+  <OBJECT>
+    <ID name="Eureka" mc="Standard.Package" uid="722eacec-8fbc-426a-88e2-ebeccbc1dec2"/>
+    <PID name="Components" mc="Standard.Package" uid="aab315f4-72da-453d-97cf-e8879f5f4b12"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Eureka]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Eureka" mc="Standard.Component" uid="2f06e8d1-a4fc-427c-8aaf-ba568f47005e"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

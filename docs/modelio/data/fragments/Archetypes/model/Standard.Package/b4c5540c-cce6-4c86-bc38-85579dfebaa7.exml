@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagrams" version="4">
+  <OBJECT>
+    <ID name="Diagrams" mc="Standard.Package" uid="b4c5540c-cce6-4c86-bc38-85579dfebaa7"/>
+    <PID name="Archetypes" mc="Standard.Project" uid="02154615-6b05-43d9-9070-50b096b3834e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Diagrams]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Communication diagram" mc="Standard.CommunicationInteraction" uid="3e71d85e-2476-4289-9113-24dc07cbc5f0"/>
+      </COMP>
+      <COMP relation="OwnedInformationFlow">
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="38eb9bdc-a228-4dfe-a7cc-11f072e5ce6b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="App" mc="Standard.CommunicationNode" uid="6130bf84-81a0-4b54-be37-cf87cf0d6c04"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="r1" mc="Standard.CommunicationNode" uid="3322d87d-83f9-441f-8e4a-78f1bcd408bf"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="03d988c9-a84d-468c-9318-bdc9126127ff"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="r1" mc="Standard.CommunicationNode" uid="3322d87d-83f9-441f-8e4a-78f1bcd408bf"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="r7" mc="Standard.CommunicationNode" uid="1ddc296d-9c03-4cb9-ac5b-ef351c76f11f"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="11885056-280d-4b4c-b3e0-111377fe5cd9"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <REFOBJ>
+                <ID name="r1" mc="Standard.CommunicationNode" uid="3322d87d-83f9-441f-8e4a-78f1bcd408bf"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <REFOBJ>
+                <ID name="r6" mc="Standard.CommunicationNode" uid="205425ec-b27d-4a54-b117-40dc2a9d687a"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagrams Use Case diagram" mc="Standard.UseCaseDiagram" uid="a515357c-81d6-4db7-b911-c923d7cd1709"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

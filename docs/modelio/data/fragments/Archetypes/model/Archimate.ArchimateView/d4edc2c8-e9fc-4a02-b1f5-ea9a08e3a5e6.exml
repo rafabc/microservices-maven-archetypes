@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ArchimateView" version="4">
+  <OBJECT>
+    <ID name="ArchimateView" mc="Archimate.ArchimateView" uid="d4edc2c8-e9fc-4a02-b1f5-ea9a08e3a5e6"/>
+    <PID name="ViewPoint" mc="Archimate.ViewPoint" uid="3c79ddcf-37a7-468e-bafa-fa4ed4a82bd0"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">0</ATT>
+      <ATT name="UiData"></ATT>
+      <ATT name="Name"><![CDATA[ArchimateView]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
