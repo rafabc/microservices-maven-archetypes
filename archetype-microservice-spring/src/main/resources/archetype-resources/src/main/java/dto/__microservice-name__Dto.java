@@ -9,13 +9,13 @@ import io.swagger.annotations.ApiModelProperty;
 #macro( ccase $str )
 #foreach( $word in $str.split('-') )$word.substring(0,1).toUpperCase()$word.substring(1)#end
 #end
-#set( $name = "#ccase( $artifactId )" )
+#set( $name = "#ccase( $microservice-name )" )
 
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ${name} {
+public class ${name}Dto {
 
 	@ApiModelProperty(notes = "field1")
 	private String field1;

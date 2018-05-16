@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 #macro( ccase $str )
 #foreach( $word in $str.split('-') )$word.substring(0,1).toUpperCase()$word.substring(1)#end
 #end
-#set( $name = "#ccase( $artifactId )" )
+#set( $name = "#ccase( $microservice-name )" )
 
 @Configuration
 @EnableSwagger2

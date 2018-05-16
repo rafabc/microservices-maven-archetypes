@@ -6,8 +6,8 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>jar</packaging>
 	<version>${version}</version>
-	<name>Eureka</name>
-	<description>Eureka Server</description>
+	<name>Config Server</name>
+	<description>Config Server</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

@@ -27,7 +27,7 @@ Create a project microservices
         -DartifactId=yourmicronodeid \
         -Dversion=0.0.1-SNAPSHOT \
 		-Dmicroservice-mapping=yourmapping \
-		-Dmicroservice-name=youmicroname
+		-Dmicroservice-name=Yourmicroname
 ```
 
 The generated project contain and yml config file, this file is necesary to put in config-server to get the configuration from config-server

@@ -24,10 +24,10 @@ Create a project spring boot microservice
         -DarchetypeArtifactId=archetype-microservice-spring \
         -DarchetypeVersion=0.0.1-SNAPSHOT \
         -DgroupId=com.micro \
-        -DartifactId=yourid \
+        -DartifactId=yourmicrosprignid \
         -Dversion=0.0.1-SNAPSHOT \
 		-Dmicroservice-mapping=yourmapping \
-		-Dmicroservice-name=youmicroname
+		-Dmicroservice-name=yourmicroname
 ```
 
 The generated project contain and yml config file, this file is necesary to put in config-server to get the configuration from config-server

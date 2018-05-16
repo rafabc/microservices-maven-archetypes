@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import ${package}.dto.${name};
+import ${package}.dto.${name}Dto;
 
 
 #macro( ccase $str )
 #foreach( $word in $str.split('-') )$word.substring(0,1).toUpperCase()$word.substring(1)#end
 #end
-#set( $name = "#ccase( $artifactId )" )
+#set( $name = "#ccase( $microservice-name )" )
 
 
 @RestController
@@ -25,9 +25,9 @@ public class ${name}Controller {
 
 	@ApiOperation(value = "get ${microservice-mapping}")
 	@RequestMapping(value = "/id/{id}", method = RequestMethod.GET, produces = "application/json")
-	public ${name} getExample(@PathVariable("id") String id) {
+	public ${name}Dto getExample(@PathVariable("id") String id) {
 		
-		${name} dtoExample = new ${name}();
+		${name}Dto dtoExample = new ${name}Dto();
 		return dtoExample;
 	}
 

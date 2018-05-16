@@ -65,4 +65,4 @@ Instructions for creating projects
 
 Automotion
 -------
-If all archetypes are installed yet, its posible use mvn-create-projects.sh to create fast all environmet projects and test it.
+If all archetypes are installed, its posible use mvn-create-projects.sh to create fast all environmet projects and test it.
