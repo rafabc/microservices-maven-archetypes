@@ -68,7 +68,7 @@ Instructions for creating projects
 - [Nodejs microservice](./archetype-microservice-nodejs/)
 
 
-Automotion
+Automation
 -------
 If all archetypes are installed, its posible use mvn-create-projects.sh to create fast all environmet projects whit default value parameters and test it.
 
