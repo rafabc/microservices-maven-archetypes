@@ -23,10 +23,15 @@ Two installation ways:
 
 ### Local
 
+
 1. Clone repository
 ```bash
 git clone https://github.com/rafabc/microservices-maven-archetypes.git
 ```
+
+After clone this project contain a shell script "mvn-install-archetypes.sh" that run all the nexts steps, but its posible run it manually if you want one by one:
+
+
 2. In console go to each archetype path
 ```bash
 cd microservices-maven-archetypes/[archetype-path]
@@ -65,4 +70,6 @@ Instructions for creating projects
 
 Automotion
 -------
-If all archetypes are installed, its posible use mvn-create-projects.sh to create fast all environmet projects and test it.
+If all archetypes are installed, its posible use mvn-create-projects.sh to create fast all environmet projects whit default value parameters and test it.
+
+After the projects are ready its posible execute the script "run-projects.sh" that launch each project.
