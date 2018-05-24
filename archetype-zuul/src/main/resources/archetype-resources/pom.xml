@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
+	<groupId>com.micro</groupId>
+	<artifactId>zuul</artifactId>
 	<packaging>jar</packaging>
-	<version>${version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>Zuul proxy</name>
 
 
@@ -13,6 +13,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<lombok.version>1.16.10</lombok.version>
+		<junit.version>4.12</junit.version>
+		<spring.cloud.version>Brixton.SR6</spring.cloud.version>
 	</properties>
 
 	<parent>
@@ -48,6 +51,23 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency> -->
+<!-- 		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+		</dependency> -->
 	</dependencies>
 
 	<dependencyManagement>
@@ -55,7 +75,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Brixton.SR6</version>
+				<version>${spring.cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

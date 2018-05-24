@@ -43,4 +43,8 @@ Create a project Spring Cloud Config Server
 ```
 	 
 
+To see the configuration properties of a microservice spring cloud config provide the next url:
+http://localhsot:[config-service-port]/[servicce-name]/info
 
+Also its posible see the config over zuul with the next url:
+http://localhsot:[zuul-port]/[config-service-name]/[servicce-name]/info

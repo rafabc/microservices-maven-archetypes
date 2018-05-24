@@ -5,3 +5,20 @@ jdk:
 
 install: "./mvn-install-archetypes.sh"
 script: "./mvn-create-projects.sh"
+
+
+before_install:
+  - chmod +x mvn-install-archetypes.sh
+  - chmod +x mvn-create-projects.sh
+
+
+deploy:
+  - provider: s3
+  ⋮ # rest of S3 deployment for MyApp.zip
+  - provider: codedeploy
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "S3 Bucket"
+  key: latest/MyApp.zip
+  application: MyApp
+  deployment_group: MyDeploymentGroup

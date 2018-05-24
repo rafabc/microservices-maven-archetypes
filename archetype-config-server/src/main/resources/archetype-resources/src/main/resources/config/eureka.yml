@@ -20,6 +20,14 @@ eureka:
   server:
     waitTimeInMsWhenSyncEmpty: 0  
     enableSelfPreservation: true
+
+logging:
+  level.com.netflix.zuul: INFO
+  level.org.springframework.cloud: INFO
+  level.org.springframework.cloud.sleuth: TRACE
+  level.org.springframework.cloud.sleuth.log: INFO
+  level.org.springframework.cloud.sleuth.trace: INFO
+  level.org.springframework.cloud.sleuth.instrument.rxjava: INFO    
     
 eureka.server.renewalPercentThreshold: 10
 eureka.instance.leaseRenewalIntervalInSeconds: 5               

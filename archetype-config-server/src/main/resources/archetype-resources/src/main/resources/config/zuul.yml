@@ -22,6 +22,16 @@ eureka:
       enabled: true
     lease:
       duration: 5 
+
+logging.file: log/zuul.log
+
+logging:
+  level.com.netflix.zuul: INFO
+  level.org.springframework.cloud: INFO
+  level.org.springframework.cloud.sleuth: TRACE
+  level.org.springframework.cloud.sleuth.log: INFO
+  level.org.springframework.cloud.sleuth.trace: INFO
+  level.org.springframework.cloud.sleuth.instrument.rxjava: INFO    
       
 spring.sleuth.sampler.percentage: 1.0
-spring.sleuth.web.skipPattern: (^cleanup.*)          
+spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)         

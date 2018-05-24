@@ -1,0 +1,5 @@
+eureka:
+  client:
+    enabled: true
+
+spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)

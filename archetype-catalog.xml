@@ -6,23 +6,51 @@
         <archetype>
             <groupId>com.archetypes</groupId>
             <artifactId>archetype-zuul</artifactId>
-            <version>5.0.0</version>
+            <version>0.0.1-SNAPSHOT</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-zuul</repository>
             <description>Archetype Neflix OSS Zuul</description>
         </archetype>
 		<archetype>
             <groupId>com.archetypes</groupId>
             <artifactId>archetype-eureka</artifactId>
-            <version>5.0.0</version>
+            <version>0.0.1-SNAPSHOT</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-eureka</repository>
             <description>Archetype Neflix OSS Eureka</description>
         </archetype>
 		<archetype>
             <groupId>com.archetypes</groupId>
             <artifactId>archetype-springbootadmin</artifactId>
-            <version>5.0.0</version>
+            <version>0.0.1-SNAPSHOT</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-springbootadmin</repository>
             <description>Archetype Spring Boot Admin</description>
+        </archetype>
+        <archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-zipkin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-zipkin</repository>
+            <description>Archetype Zipkin</description>
+        </archetype>        
+        <archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-swagger-catalog</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-swagger-catalog</repository>
+            <description>Archetype Spring Boot Admin</description>
+        </archetype>        
+        <archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-microservice-nodejs</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-microservice-nodejs</repository>
+            <description>Archetype Microservices Nodejs</description>
+        </archetype>        
+        <archetype>
+            <groupId>com.archetypes</groupId>
+            <artifactId>archetype-microservice-spring</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-microservice-spring</repository>
+            <description>Archetype Microservice Spring Boot</description>
         </archetype>
     </archetypes>
 </archetype-catalog>

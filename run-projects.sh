@@ -4,7 +4,7 @@ GREEN="\e[0;32m"
 RESET="\e[0m"
 
 printf "%s$RED%s-------------------------------------------------------------------------------\n"
-printf "%s$RED%sRuning java -jar projects\n"
+printf "%s$RED%sRunning java -jar projects\n"
 printf "%s$RED%s-------------------------------------------------------------------------------\n\n"
 
 
