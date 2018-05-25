@@ -26,7 +26,7 @@ mvn archetype:generate -B -DarchetypeGroupId=com.archetypes -DarchetypeArtifactI
 #mvn archetype:generate -B -DarchetypeGroupId=com.archetypes -DarchetypeArtifactId=archetype-microservices-nodejs -DarchetypeVersion=0.0.1-SNAPSHOT -DgroupId=com.micro -DartifactId=yourmicronodeid -Dversion=0.0.1-SNAPSHOT -Dmicroservice-mapping=yourmapping -Dmicroservice-name=yourmicroname
 
 #mvn install
-for d in * ; do
+for d in */ ; do
 	cd $d
 	printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 	printf "%s$GREEN%s \u2713 ";
