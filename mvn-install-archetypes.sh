@@ -14,7 +14,7 @@ for d in */ ; do
 		
 		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 		printf "%s$GREEN%s \u2713 ";
-		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Runing mvn install for "$d
+		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Runing mvn install archetype "$d
 		printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 		cd $d
 		mvn clean install
