@@ -23,9 +23,9 @@ before_install:
 #  application: MyApp
 #  deployment_group: MyDeploymentGroup
 
-deploy:
-  provider: heroku
-  app: microservices-netflix
-  skip_cleanup: true
-  api_key:
-    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+#deploy:
+#  provider: heroku
+#  app: microservices-netflix
+#  skip_cleanup: true
+#  api_key:
+#    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
