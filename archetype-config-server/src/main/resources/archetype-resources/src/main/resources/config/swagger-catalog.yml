@@ -28,4 +28,4 @@ eureka:
       duration: 5
       
 spring.sleuth.sampler.percentage: 1.0
-spring.sleuth.web.skipPattern: (^cleanup.*)          
+spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)         
