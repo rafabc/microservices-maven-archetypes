@@ -5,3 +5,5 @@
 | \__/\ \_/ / |\  || |    _| |_| |_\ \     /\__/ / |___| |\ \\ \_/ / |___| |\ \
  \____/\___/\_| \_/\_|    \___/ \____/     \____/\____/\_| \_|\___/\____/\_| \_|
 
+ ${AnsiColor.GREEN}:: Powered by Spring Boot ::        ${AnsiStyle.FAINT}${AnsiColor.BLACK}${spring-boot.formatted-version}${AnsiStyle.NORMAL}
+
