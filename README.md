@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/rafabc/microservices-maven-archetypes.svg?branch=master)](https://travis-ci.org/rafabc/microservices-maven-archetypes)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/91ca599b594547b793a8e082a6786f87)](https://www.codacy.com/app/rafabc1979/microservices-maven-archetypes?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rafabc/microservices-maven-archetypes&amp;utm_campaign=Badge_Grade)
+
+
 microservices-maven-archetypes
 ======================================
 
