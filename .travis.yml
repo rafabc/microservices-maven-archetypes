@@ -25,5 +25,6 @@ before_install:
 
 deploy:
   provider: heroku
+  app: microservices-netflix
   api_key:
     secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
