@@ -1,4 +1,4 @@
-package com.micro;
+package ${package};
 
 import static org.assertj.core.api.Assertions.assertThat;
 
