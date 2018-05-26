@@ -66,7 +66,7 @@ mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVers
 
 #mvn install
 for d in */ ; do
-	if [[ $d != *"docs"* ]]; then
+	if [[ $d != *"docs"* ]] && [[$d != *"archetype"*]]; then
 		cd $d
 		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 		printf "%s$GREEN%s \u2713 ";

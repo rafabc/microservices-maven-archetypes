@@ -21,5 +21,5 @@ for d in */ ; do
 		cd ..
 	fi
 done
-#mvn install archetype:update-local-catalog
-#mvn archetype:crawl
+mvn install archetype:update-local-catalog
+mvn archetype:crawl
