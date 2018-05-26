@@ -1,37 +1,7 @@
 #!/bin/sh
 
 . scripts/colors.sh
-
-LOCALHOST="localhost"
-
-CONFIG_SERVER_HOST=$LOCALHOST
-CONFIG_SERVER_PORT=1111
-CONFIG_SERVER_VERSION="0.0.1-SNAPSHOT"
-EUREKA_HOST=$LOCALHOST
-EUREKA_PORT=2222
-EUREKA_VERSION="0.0.1-SNAPSHOT"
-SPRING_BOOT_ADMIN_PORT=3333
-SPRING_BOOT_ADMIN_VERSION="0.0.1-SNAPSHOT"
-ZIPKIN_PORT=4444
-ZIPKIN_VERSION="0.0.1-SNAPSHOT"
-ZUUL_PORT=8082
-ZUUL_VERSION="0.0.1-SNAPSHOT"
-
-MICRO_SPRING_NAME="MicroService"
-MICRO_SPRING_MAPPING="test-mapping"
-MICRO_SPRING_VERSION="0.0.1-SNAPSHOT"
-
-MICRO_NODE_NAME="micro-node"
-MICRO_NODE_MAPPING="node-mapping"
-MICRO_NODE_VERSION="0.0.1-SNAPSHOT"
-
-SWAGGER_CATALOG_VERSION="0.0.1-SNAPSHOT"
-SWAGGER_CATALOG_PORT=5555
-
-SERVICES_GROUPID="com.micro"
-
-ARCHETYPES_GROUPID="com.archetypes"
-ARCHETYPES_VERSION="0.0.1-SNAPSHOT"
+. scripts/parameters.sh
 
 
 
@@ -41,7 +11,8 @@ printf "%s$GREEN%sRunning maven create projects from archetypes\n"
 printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 mvn -v
 
-mkdir projects && cd $_
+mkdir projects
+cd projects
 
 printf "%s$GREEN%sCREATING PROJECT CONFIG SERVER%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-config-server -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=configserver -Dversion=$CONFIG_SERVER_VERSION -Dconfig-server-port=$CONFIG_SERVER_PORT -Deureka-port=$EUREKA_PORT -Deureka-host=$EUREKA_HOST -Dspring-boot-admin-port=$SPRING_BOOT_ADMIN_PORT -Dzipkin-port=$ZIPKIN_PORT -Dzuul-port=$ZUUL_PORT
@@ -60,9 +31,27 @@ mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVers
 printf "%s$GREEN%sCREATING PROJECT MICROSERVICE NODEJS%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-microservices-nodejs -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=micronode -Dversion=$MICRO_NODE_VERSION -Dmicroservice-mapping=$MICRO_NODE_MAPPING -Dmicroservice-name=$MICRO_NODE_NAME
 
-#mvn install
-for d in */projects/ ; do
-	if [[ $d != *"docs"* ]] && [[$d != *"archetype"*]]; then
+
+for d in * ; do
+	echo $d
+	file_config_spring="$MICRO_SPRING_NAME.yml"
+	file_config_node="$MICRO_NODE_NAME.yml"
+
+	if [ -f "./$d/src/main/resources/$file_config_spring" ]
+	then
+		mv $PWD/$d/src/main/resources/$file_config_spring $PWD/configserver/src/main/resources/config/$file_config_spring
+	fi
+	if [ -f "./$d/$file_config_node" ]
+	then
+		mv $PWD/$d/$file_config_node $PWD/configserver/src/main/resources/config/$file_config_node
+	fi
+done
+
+		
+
+echo $PWD
+for d in */ ; do
+	if [ $d != *"docs"* ] && [ $d != *"archetype"* ] && [ $d != *"scripts"* ]; then
 		cd $d
 		printf "%s$YELLOW%s-------------------------------------------------------------------------------\n"
 		printf "%s$YELLOW%s \u2713 ";
