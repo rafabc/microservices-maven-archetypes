@@ -10,7 +10,7 @@ printf "%s$GREEN%s--------------------------------------------------------------
 mvn -v
 
 for d in */ ; do
-	if [[ $d == *"archetype"* ]]; then
+	if [[ $d == *"archetype-"* ]]; then
 		
 		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 		printf "%s$GREEN%s \u2713 ";
@@ -21,5 +21,5 @@ for d in */ ; do
 		cd ..
 	fi
 done
-mvn install archetype:update-local-catalog
-mvn archetype:crawl
+#mvn install archetype:update-local-catalog
+#mvn archetype:crawl
