@@ -1,16 +1,16 @@
 
 const fp = require("find-free-port");
 const client = require("cloud-config-client");
-const msg = require('../utils/messages');
+const msg = require("../utils/messages");
 
 
 module.exports = {
 
   getPort: function(callback) {
     fp(3000).then(([freep]) => {
-        msg.line('node port free to be used: ' + freep);
+        msg.line("node port free to be used: " + freep);
         callback(freep);
-    }).catch((err)=>{
+    }).catch((err) => {
         console.error(err);
     });
   },

@@ -1,10 +1,10 @@
-const Eureka = require('eureka-js-client').Eureka;
-const ip = require('ip');
-const config = require('../config');
-const os = require('os');
-const chalk = require('chalk');
+const Eureka = require("eureka-js-client").Eureka;
+const ip = require("ip");
+const config = require("../config");
+const os = require("os");
+const chalk = require("chalk");
 const log = console.log;
-const msg = require('../utils/messages');
+const msg = require("../utils/messages");
 
 /*const morgan = require('morgan'); --> to manage environmets*/
 var client = null;
@@ -15,7 +15,7 @@ module.exports = {
 
     config.getEurekaConfig(function(data){
 
-      msg.initializing('eureka');
+      msg.initializing("eureka");
       
       client = new Eureka({
 
@@ -25,16 +25,16 @@ module.exports = {
           ipAddr: ip.address(),
           instanceId: os.hostname() + ":" + data.app + ":" + port,
           port: {
-                '$': port,
-                '@enabled': true
+                "$": port,
+                "@enabled": true
           },
-          vipAddress: '${microservice-name}',
-          statusPageUrl: 'http://localhost:' + port + data.statusPage,
-          homePageUrl: 'http://localhost:' + port + data.homePage,
-          healthCheckUrl: 'http://localhost:' + port + data.healthPage,
+          vipAddress: "${microservice-name}",
+          statusPageUrl: "http://localhost:" + port + data.statusPage,
+          homePageUrl: "http://localhost:" + port + data.homePage,
+          healthCheckUrl: "http://localhost:" + port + data.healthPage,
           dataCenterInfo: {
-            name: 'MyOwn',
-            '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
+            name: "MyOwn",
+            "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
           },
         },
         eureka: {
@@ -45,10 +45,10 @@ module.exports = {
         },
       });
 
-      client.logger.level('error');
+      client.logger.level("error");
       client.start();
 
-      msg.ready('eureka', 'http://' + data.host + ":" + data.port + data.path);
+      msg.ready("eureka", "http://" + data.host + ":" + data.port + data.path);
     });
 
   },

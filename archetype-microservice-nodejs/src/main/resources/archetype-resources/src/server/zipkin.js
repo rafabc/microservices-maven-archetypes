@@ -14,12 +14,12 @@ module.exports = {
 
     config.getZipkinConfig(function(data){
 
-    	msg.initializing("zipkin");
+		msg.initializing("zipkin");
 
-    	const recorder = new BatchRecorder({
-		  logger: new HttpLogger({
-		    endpoint: data.host + ":" + data.port + data.path
-		  })
+		const recorder = new BatchRecorder({
+			logger: new HttpLogger({
+				endpoint: data.host + ":" + data.port + data.path
+			})
 		});
 
 		const tracer = new Tracer({ ctxImpl, recorder });
