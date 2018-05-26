@@ -33,3 +33,4 @@ before_install:
 
 after_success:
   - ./mvnw jacoco:report coveralls:report
+  - mvn clean cobertura:cobertura coveralls:report

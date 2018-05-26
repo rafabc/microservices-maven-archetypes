@@ -31,15 +31,7 @@ module.exports = {
 	getGfiStart: function(version) {
 		try {
 			var chalkMsg =
-				chalk.yellow('\n  ╔══════════╗   ╔══════════   ══════╦═════') +
-				chalk.yellow('\n  ║          ║   ║                   ║') +
-				chalk.yellow('\n  ║          ║   ║                   ║') +
-				chalk.yellow('\n  ║              ╠══════════         ║') +
-				chalk.yellow('\n  ║              ║                   ║') +
-				chalk.yellow('\n  ║      ════╗   ║                   ║') +
-				chalk.yellow('\n  ║          ║   ║                   ║') +
-				chalk.yellow('\n  ║          ║   ║                   ║') +
-				chalk.yellow('\n  ╚══════════╝   ║             ══════╩═════') +
+				chalk.yellow('\n  NODE MICROSERVICE STARTING') +
 				chalk.green('\n       GFI Base ') + chalk.white('v' + version)  + chalk.yellow('Powered by node\n\n');
 			
 			console.log(chalkMsg);
