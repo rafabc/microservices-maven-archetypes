@@ -1,13 +1,11 @@
 #!/bin/sh
 
-RED="\e[0;31m"
-GREEN="\e[0;32m"
-RESET="\e[0m"
+. scripts/colors.sh
 
-printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
-printf "%s$GREEN%s \u2713 ";
-printf "%s$GREEN%sRunning maven install archetypes\n"
-printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
+printf "%s$CYAN%s-------------------------------------------------------------------------------\n"
+printf "%s$CYAN%s \u2713 ";
+printf "%s$CYAN%sRunning maven install archetypes\n"
+printf "%s$CYAN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 mvn -v
 
 for d in */ ; do
@@ -19,8 +17,18 @@ for d in */ ; do
 		printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 		cd $d
 		mvn clean install
+		printf "%s$YELLOW%s-------------------------------------------------------------------------------\n"
+		printf "%s$YELLOW%s \u2713 ";
+		printf "%s$YELLOW%sUpdating maven catalog\n"
+		printf "%s$YELLOW%s-------------------------------------------------------------------------------%s$RESET%s\n"
+		mvn install archetype:update-local-catalog
 		cd ..
 	fi
 done
-mvn install archetype:update-local-catalog
+
+
+printf "%s$CYAN%s-------------------------------------------------------------------------------\n"
+printf "%s$CYAN%s \u2713 ";
+printf "%s$CYAN%sRunning crawl to build catalog\n"
+printf "%s$CYAN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 mvn archetype:crawl

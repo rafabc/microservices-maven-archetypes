@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. scripts/colors.sh
+
 LOCALHOST="localhost"
 
 CONFIG_SERVER_HOST=$LOCALHOST
@@ -33,18 +35,13 @@ ARCHETYPES_VERSION="0.0.1-SNAPSHOT"
 
 
 
-RED="\e[0;31m"
-GREEN="\e[0;32m"
-RESET="\e[0m"
-
-
 printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 printf "%s$GREEN%s \u2713 ";
 printf "%s$GREEN%sRunning maven create projects from archetypes\n"
 printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 mvn -v
 
-
+mkdir projects && cd $_
 
 printf "%s$GREEN%sCREATING PROJECT CONFIG SERVER%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-config-server -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=configserver -Dversion=$CONFIG_SERVER_VERSION -Dconfig-server-port=$CONFIG_SERVER_PORT -Deureka-port=$EUREKA_PORT -Deureka-host=$EUREKA_HOST -Dspring-boot-admin-port=$SPRING_BOOT_ADMIN_PORT -Dzipkin-port=$ZIPKIN_PORT -Dzuul-port=$ZUUL_PORT
@@ -64,13 +61,13 @@ printf "%s$GREEN%sCREATING PROJECT MICROSERVICE NODEJS%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-microservices-nodejs -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=micronode -Dversion=$MICRO_NODE_VERSION -Dmicroservice-mapping=$MICRO_NODE_MAPPING -Dmicroservice-name=$MICRO_NODE_NAME
 
 #mvn install
-for d in */ ; do
+for d in */projects/ ; do
 	if [[ $d != *"docs"* ]] && [[$d != *"archetype"*]]; then
 		cd $d
-		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
-		printf "%s$GREEN%s \u2713 ";
-		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Running mvn install for "$d
-		printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
+		printf "%s$YELLOW%s-------------------------------------------------------------------------------\n"
+		printf "%s$YELLOW%s \u2713 ";
+		printf "%s$YELLOW%s %s %s %s %s %s %s %s %s %s\n" "Running mvn install for "$d
+		printf "%s$YELLOW%s-------------------------------------------------------------------------------%s$RESET%s\n"
 		mvn clean install
 		cd ..
 	fi
