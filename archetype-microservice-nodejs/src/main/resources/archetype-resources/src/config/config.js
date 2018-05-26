@@ -1,5 +1,5 @@
 
-const fp = require("find-free-port")
+const fp = require("find-free-port");
 const client = require("cloud-config-client");
 const msg = require('../utils/messages');
 

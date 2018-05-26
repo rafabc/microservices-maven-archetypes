@@ -1,9 +1,9 @@
 
-const { BatchRecorder } = require('zipkin')
-const { HttpLogger } = require('zipkin-transport-http')
-const CLSContext = require('zipkin-context-cls')
-const { Tracer, Annotation, InetAddress, Request } = require('zipkin')
-const ctxImpl = new CLSContext('zipkin')
+const { BatchRecorder } = require('zipkin');
+const { HttpLogger } = require('zipkin-transport-http');
+const CLSContext = require('zipkin-context-cls');
+const { Tracer, Annotation, InetAddress, Request } = require('zipkin');
+const ctxImpl = new CLSContext('zipkin');
 const config = require('../config');
 const msg = require('../utils/messages');
 //const recorder = new ConsoleRecorder();

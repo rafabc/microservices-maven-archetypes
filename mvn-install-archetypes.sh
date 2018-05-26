@@ -1,3 +1,4 @@
+#!/bin/sh
 
 RED="\e[0;31m"
 GREEN="\e[0;32m"

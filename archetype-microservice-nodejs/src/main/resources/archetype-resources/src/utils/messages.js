@@ -5,7 +5,7 @@ module.exports = {
 
 	initializing: function(tool) {
 
-		log(chalk.yellow('\n ╔════════════════════════════════════════════════════════╗'))
+		log(chalk.yellow('\n ╔════════════════════════════════════════════════════════╗'));
       	log(chalk.yellow(' ║ '  + tool + ' initializing'));
       	
 	},

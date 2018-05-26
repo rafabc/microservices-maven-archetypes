@@ -13,6 +13,16 @@ const zipkin = require ('./zipkin');
 const serviceName = '${microservice-name}';
 const msg = require('../utils/messages');
 
+
+function exitHandler(options, err) {
+    try{
+      eureka.stop();
+  }catch(e){
+    msg.box("error closing eureka:" + e);
+  }
+    process.exit(1);
+}
+
 const start = () => {
   return new Promise((resolve, reject) => {
     msg.getGfiStart('0.0.1');
@@ -49,15 +59,6 @@ const start = () => {
     process.on('SIGTERM', exitHandler.bind(null,{cleanup:true}));
     process.on('SIGINT', exitHandler.bind(null,{cleanup:true}));});
     process.on('exit', exitHandler.bind(null,{cleanup:true}));
-}
-
-function exitHandler(options, err) {
-    try{
-    	eureka.stop();
-	}catch(e){
-		msg.box("error closing eureka:" + e);
-	}
-    process.exit(1);
-}
+};
 
 module.exports = Object.assign({}, {start});
