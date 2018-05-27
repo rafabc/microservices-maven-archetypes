@@ -1,34 +1,46 @@
 #!/bin/bash
 
 . scripts/colors.sh
+. scripts/simbols.sh
+. scripts/messages.sh
 
-printf "%s$CYAN%s-------------------------------------------------------------------------------\n"
-printf "%s$CYAN%s \u2713 ";
-printf "%s$CYAN%sRunning maven install archetypes\n"
-printf "%s$CYAN%s-------------------------------------------------------------------------------%s$RESET%s\n"
+msg_task_gen "Launching maven install archetypes"
 mvn -v
 
-for d in */ ; do
-	if [[ $d == *"archetype-"* ]]; then
+for d in * ; do
+	if [[ ( $d == *"archetype-"* ) && ( -d $d ) ]]; then  #second if check if is a directory
 		
-		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
-		printf "%s$GREEN%s \u2713 ";
-		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Runing mvn install archetype "$d
-		printf "%s$GREEN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 		cd $d
+		msg_task "Runing mvn install archetype $d"
 		mvn clean install
-		printf "%s$YELLOW%s-------------------------------------------------------------------------------\n"
-		printf "%s$YELLOW%s \u2713 ";
-		printf "%s$YELLOW%sUpdating maven catalog\n"
-		printf "%s$YELLOW%s-------------------------------------------------------------------------------%s$RESET%s\n"
+		STATUS=$?
+		if [ $STATUS -eq 0 ]; then
+			msg_ok "archetype $d installed correctly"
+		else
+			msg_ko "failed installing archetype $d"
+			exit 1
+		fi
+		
+		msg_task "Updating maven catalog"
 		mvn install archetype:update-local-catalog
+		STATUS=$?
+		if [ $STATUS -eq 0 ]; then
+			msg_ok "catalog updated correctly"
+		else
+			msg_ko "failed updating catalog"
+			exit 1
+		fi
 		cd ..
 	fi
 done
 
 
-printf "%s$CYAN%s-------------------------------------------------------------------------------\n"
-printf "%s$CYAN%s \u2713 ";
-printf "%s$CYAN%sRunning crawl to build catalog\n"
-printf "%s$CYAN%s-------------------------------------------------------------------------------%s$RESET%s\n"
+msg_task_gen "Runing crawl to build catalog"
 mvn archetype:crawl
+STATUS=$?
+if [ $STATUS -eq 0 ]; then
+	msg_ok "craw catalog builded correctly"
+else
+	msg_ko "craw failed building catalog"
+	exit 1
+fi

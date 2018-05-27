@@ -14,13 +14,14 @@
 		<jacoco-maven-plugin.version>0.8.1</jacoco-maven-plugin.version>
 	</properties>
 
+	<!--
 	<parent>
 		<groupId>com.archetypes</groupId>
 		<artifactId>microservices-archetypes</artifactId>
 		<version>${revision}</version>
 		<relativePath>..</relativePath>
 	</parent>
-
+	-->
 	<build>
 		<extensions>
 			<extension>

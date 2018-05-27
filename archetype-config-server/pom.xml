@@ -13,14 +13,14 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-
+<!--
 	<parent>
 		<groupId>com.archetypes</groupId>
 		<artifactId>microservices-archetypes</artifactId>
-        <version>${revision}</version>
-        <relativePath>..</relativePath>
-    </parent>
-
+		<version>${revision}</version>
+		<relativePath>..</relativePath>
+	</parent>
+-->
 	<build>
 		<extensions>
 			<extension>
