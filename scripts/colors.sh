@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export RED="\e[0;31m"
 export GREEN="\e[0;32m"
