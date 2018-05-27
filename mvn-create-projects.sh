@@ -14,21 +14,21 @@ mvn -v
 mkdir projects
 cd projects
 
-printf "%s$GREEN%sCREATING PROJECT CONFIG SERVER%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT CONFIG SERVER%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-config-server -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=configserver -Dversion=$CONFIG_SERVER_VERSION -Dconfig-server-port=$CONFIG_SERVER_PORT -Deureka-port=$EUREKA_PORT -Deureka-host=$EUREKA_HOST -Dspring-boot-admin-port=$SPRING_BOOT_ADMIN_PORT -Dzipkin-port=$ZIPKIN_PORT -Dzuul-port=$ZUUL_PORT
-printf "%s$GREEN%sCREATING PROJECT EUREKA%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT EUREKA%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-eureka -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=eureka -Dversion=$EUREKA_VERSION
-printf "%s$GREEN%sCREATING PROJECT SPRING BOOT ADMIN%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT SPRING BOOT ADMIN%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-springbootadmin -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=springbootadmin -Dversion=$SPRING_BOOT_ADMIN_VERSION
-printf "%s$GREEN%sCREATING PROJECT ZUUL%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT ZUUL%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-zuul -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=zuul -Dversion=$ZUUL_VERSION
-printf "%s$GREEN%sCREATING PROJECT ZIPKIN%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT ZIPKIN%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-zipkin -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=zipkin -Dversion=$ZIPKIN_VERSION
-printf "%s$GREEN%sCREATING PROJECT SWAGGER CATALOG%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT SWAGGER CATALOG%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-swagger-catalog -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=swagger -Dversion=$SWAGGER_CATALOG_VERSION -Dswagger-catalog-port=$SWAGGER_CATALOG_PORT
-printf "%s$GREEN%sCREATING PROJECT MICROSERVICE SPRING%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT MICROSERVICE SPRING%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-microservice-spring -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=microspring -Dversion=$MICRO_SPRING_VERSION -Dmicroservice-mapping=$MICRO_SPRING_MAPPING -Dmicroservice-name=$MICRO_SPRING_NAME
-printf "%s$GREEN%sCREATING PROJECT MICROSERVICE NODEJS%s$RESET%s\n"
+printf "%s$GREEN%s\nCREATING PROJECT MICROSERVICE NODEJS%s$RESET%s\n"
 mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-microservices-nodejs -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=micronode -Dversion=$MICRO_NODE_VERSION -Dmicroservice-mapping=$MICRO_NODE_MAPPING -Dmicroservice-name=$MICRO_NODE_NAME
 
 
