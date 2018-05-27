@@ -3,13 +3,14 @@
 . scripts/colors.sh
 . scripts/parameters.sh
 
-printf "%s$RED%s-------------------------------------------------------------------------------\n"
-printf "%s$RED%sRunning java -jar projects\n"
-printf "%s$RED%s-------------------------------------------------------------------------------\n\n"
+printf "%s$YELLOW_HIGH%s-------------------------------------------------------------------------------\n"
+printf "%s$YELLOW_HIGH%sRunning java -jar projects\n"
+printf "%s$YELLOW_HIGH%s-------------------------------------------------------------------------------\n\n"
 
 
 cd projects
 
+delay=40
 
 for d in * ; do
 	
@@ -21,7 +22,7 @@ for d in * ; do
 		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Launching service $d-0.0.1-SNAPSHOT.jar"
 		
 		start "" "%SYSTEMDRIVE%\Program Files\Git\bin\sh.exe" --login -i -l -c "sh -c 'java -jar $PWD/target/$d-0.0.1-SNAPSHOT.jar'"
-		sleep 40
+		sleep $delay
 		printf "%s$GREEN%s \u2713 READY\n";
 		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 		cd ..
@@ -35,13 +36,13 @@ for d in * ; do
 		printf "%s$GREEN%s %s %s %s %s %s %s %s %s %s\n" "Launching node microservice"
 		
 		start "" "%SYSTEMDRIVE%\Program Files\Git\bin\sh.exe" --login -i -l -c "sh -c 'node $PWD/src/index'"
-		sleep 40
+		sleep $delay
 		printf "%s$GREEN%s \u2713 READY\n";
 		printf "%s$GREEN%s-------------------------------------------------------------------------------\n"
 
 		cd ..
 	fi
-
+	delay=$(( $delay-5 ))
 
 done
 

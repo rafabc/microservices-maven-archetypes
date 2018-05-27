@@ -6,7 +6,7 @@ const msg = require("../utils/messages");
 
 module.exports = {
 
-  getPort: function(callback) {
+  getPort (callback) {
     fp(3000).then(([freep]) => {
         msg.line("node port free to be used: " + freep);
         callback(freep);
@@ -15,7 +15,7 @@ module.exports = {
     });
   },
 
-  getEurekaConfig: function(callback) {
+  getEurekaConfig (callback) {
 
     client.load({
         application: "${microservice-name}",
@@ -46,7 +46,7 @@ module.exports = {
 
   },
 
-  getZipkinConfig: function(callback) {
+  getZipkinConfig (callback) {
     client.load({
         application: "${microservice-name}",
         endpoint: "http://${config-server-host}:${config-server-port}"

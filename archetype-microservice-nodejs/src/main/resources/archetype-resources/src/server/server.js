@@ -45,7 +45,7 @@ const start = () => {
 
         zipkin.start(function(tracer, middleware){
           app.use(middleware({tracer, serviceName, port, }));
-          app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+          app.use('/api/V2/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
           api(app);
         });
 
