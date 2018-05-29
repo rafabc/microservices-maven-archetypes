@@ -35,12 +35,13 @@ for d in * ; do
 done
 
 
-msg_task_gen "Runing crawl to build catalog"
-mvn archetype:crawl
-STATUS=$?
-if [ $STATUS -eq 0 ]; then
-	msg_ok "craw catalog builded correctly"
-else
-	msg_ko "craw failed building catalog"
-	exit 1
-fi
+#DISABLED FOR FAST EXECUTION AND TESTING
+#msg_task_gen "Runing crawl to build catalog"
+#mvn archetype:crawl
+#STATUS=$?
+#if [ $STATUS -eq 0 ]; then
+#	msg_ok "craw catalog builded correctly"
+#else
+#	msg_ko "craw failed building catalog"
+#	exit 1
+#fi

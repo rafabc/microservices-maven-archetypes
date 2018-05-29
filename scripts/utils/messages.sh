@@ -1,9 +1,7 @@
 #!/bin/bash
 
 
-#$0 COLOR
-#$1 SIMBOL
-#$2 MESSAGE
+#$1 MESSAGE
 function msg_ok() {
 	printf "\n%s$GREEN%s-------------------------------------------------------------------------------\n"
 	printf "%s$GREEN%s %s$OK%s $1\n";
