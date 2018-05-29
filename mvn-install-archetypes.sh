@@ -1,8 +1,8 @@
 #!/bin/bash
 
-. scripts/colors.sh
-. scripts/simbols.sh
-. scripts/messages.sh
+. scripts/utils/colors.sh
+. scripts/utils/simbols.sh
+. scripts/utils/messages.sh
 
 msg_task_gen "Launching maven install archetypes"
 mvn -v
