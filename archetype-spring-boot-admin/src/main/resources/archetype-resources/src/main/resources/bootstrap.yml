@@ -4,4 +4,4 @@ spring:
   cloud:
     config:
       uri: http://${config-server-host}:${config-server-port}
-      fail-fast: true 
+      fail-fast: true     

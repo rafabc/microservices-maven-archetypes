@@ -18,7 +18,7 @@ function msg_ko() {
 
 function msg_task_gen() {
 	printf "\n%s$CYAN%s-------------------------------------------------------------------------------\n"
-	printf "%s$CYAN%s %s$ARROW2%s $1\n";
+	printf "%s$CYAN%s %s$ARROW%s $1\n";
 	printf "%s$CYAN%s-------------------------------------------------------------------------------%s$RESET%s\n"
 }
 

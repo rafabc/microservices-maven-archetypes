@@ -2,11 +2,10 @@
 
 . scripts/colors.sh
 . scripts/parameters.sh
+. scripts/simbols.sh
+. scripts/messages.sh
 
-printf "%s$YELLOW_HIGH%s-------------------------------------------------------------------------------\n"
-printf "%s$YELLOW_HIGH%sRunning java -jar projects\n"
-printf "%s$YELLOW_HIGH%s-------------------------------------------------------------------------------\n\n"
-
+msg_task "Running java -jar projects"
 
 cd projects
 

@@ -48,7 +48,7 @@ check_result $? "Microservice Nodejs"
 
 
 for d in * ; do
-	echo $d
+	
 	file_config_spring="$MICRO_SPRING_NAME.yml"
 	file_config_node="$MICRO_NODE_NAME.yml"
 
@@ -67,7 +67,8 @@ done
 		
 
 for d in */ ; do
-	if [ $d != *"docs"* ] && [ $d != *"archetype"* ] && [ $d != *"scripts"* ]; then
+	#if [[ ( $d == *"archetype-"* ) && ( -d $d ) ]]; then
+	if [ -d $d ] && [ $d != *"docs"* ] && [ $d != *"archetype"* ] && [ $d != *"scripts"* ]; then
 		cd $d
 		msg_task "Running mvn install for $d"
 		mvn clean install
