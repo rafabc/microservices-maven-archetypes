@@ -5,6 +5,13 @@
     <archetypes>
         <archetype>
             <groupId>com.archetypes</groupId>
+            <artifactId>archetype-config-server</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-config-server</repository>
+            <description>Archetype Microservice Spring Boot</description>
+        </archetype>        
+        <archetype>
+            <groupId>com.archetypes</groupId>
             <artifactId>archetype-zuul</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-zuul</repository>
@@ -36,7 +43,7 @@
             <artifactId>archetype-swagger-catalog</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <repository>https://raw.githubusercontent.com/rafabc/microservices-maven-archetypes/master/archetype-swagger-catalog</repository>
-            <description>Archetype Spring Boot Admin</description>
+            <description>Archetype Swagger Catalog</description>
         </archetype>        
         <archetype>
             <groupId>com.archetypes</groupId>

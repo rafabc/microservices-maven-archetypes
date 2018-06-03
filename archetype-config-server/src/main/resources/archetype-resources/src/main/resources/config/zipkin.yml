@@ -14,3 +14,4 @@ eureka:
       duration: 5
       
       
+management.security.enabled: false #disabled for get acces to logging info from spring boot admin

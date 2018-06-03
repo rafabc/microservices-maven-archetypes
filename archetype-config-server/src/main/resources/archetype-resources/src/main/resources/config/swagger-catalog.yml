@@ -29,3 +29,5 @@ eureka:
       
 spring.sleuth.sampler.percentage: 1.0
 spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)         
+
+management.security.enabled: false

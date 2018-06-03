@@ -27,9 +27,9 @@ create_eureka
 create_spring_boot_admin
 create_zuul
 create_zipkin
-create_swagger_catalog
-create_micro_spring
-create_micro_node
+#create_swagger_catalog
+#create_micro_spring
+#create_micro_node
 		
 
 #AT THE END WHEN ALL PROJECT ARE CREATED IS NECESARY RUN MVN INSTALL FOR CONFIG SERVER

@@ -30,4 +30,4 @@ logging:
   level.org.springframework.cloud.sleuth.instrument.rxjava: INFO    
     
 eureka.server.renewalPercentThreshold: 10
-eureka.instance.leaseRenewalIntervalInSeconds: 5               
+eureka.instance.leaseRenewalIntervalInSeconds: 5            

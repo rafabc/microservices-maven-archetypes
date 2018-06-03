@@ -10,6 +10,9 @@ cd projects
 
 delay=40
 
+#IMPORTANT
+#this script only run projects on windows thought git bash
+
 for d in * ; do
 	
 	if [[ $d != *"node"* ]]; then #dont run project node y spring micros
