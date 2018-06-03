@@ -4,7 +4,16 @@
 function create_micro_spring() {
 
 	msg_task "CREATING PROJECT MICROSERVICE SPRING"
-	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-microservice-spring -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=$MICRO_SPRING_ID -Dversion=$MICRO_SPRING_VERSION -Dmicroservice-mapping=$MICRO_SPRING_MAPPING -Dmicroservice-name=$MICRO_SPRING_NAME
+	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID \
+								-DarchetypeVersion=$ARCHETYPES_VERSION \
+								-DarchetypeArtifactId=archetype-microservice-spring \
+								-DgroupId=$SERVICES_GROUPID \
+								-Dconfig-server-host=$CONFIG_SERVER_HOST \
+								-DartifactId=$MICRO_SPRING_ID \
+								-Dversion=$MICRO_SPRING_VERSION \
+								-Dmicroservice-mapping=$MICRO_SPRING_MAPPING \
+								-Dmicroservice-name=$MICRO_SPRING_NAME
+
 	check_result $? "Microservice Spring"
 
 

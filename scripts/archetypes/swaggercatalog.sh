@@ -4,7 +4,15 @@
 function create_swagger_catalog() {
 
 	msg_task "CREATING PROJECT SWAGGER CATALOG"
-	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-swagger-catalog -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=$SWAGGER_CATALOG_ID -Dversion=$SWAGGER_CATALOG_VERSION -Dswagger-catalog-port=$SWAGGER_CATALOG_PORT
+	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID \
+								-DarchetypeVersion=$ARCHETYPES_VERSION \
+								-DarchetypeArtifactId=archetype-swagger-catalog \
+								-DgroupId=$SERVICES_GROUPID \
+								-Dconfig-server-host=$CONFIG_SERVER_HOST \
+								-DartifactId=$SWAGGER_CATALOG_ID \
+								-Dversion=$SWAGGER_CATALOG_VERSION \
+								-Dswagger-catalog-port=$SWAGGER_CATALOG_PORT
+
 	check_result $? "Swagger Catalog"
 
 

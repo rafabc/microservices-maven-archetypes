@@ -21,13 +21,13 @@ for d in * ; do
 			exit 1
 		fi
 		
-		msg_task "Updating maven catalog"
+		msg_task "Updating maven catalog for $d"
 		mvn install archetype:update-local-catalog
 		STATUS=$?
 		if [ $STATUS -eq 0 ]; then
-			msg_ok "catalog updated correctly"
+			msg_ok "catalog updated correctly for $d"
 		else
-			msg_ko "failed updating catalog"
+			msg_ko "failed updating catalog for $d"
 			exit 1
 		fi
 		cd ..

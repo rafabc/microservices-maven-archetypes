@@ -4,7 +4,13 @@
 function create_eureka() {
 
 	msg_task "CREATING PROJECT EUREKA"
-	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID -DarchetypeVersion=$ARCHETYPES_VERSION -DarchetypeArtifactId=archetype-eureka -DgroupId=$SERVICES_GROUPID -Dconfig-server-host=$CONFIG_SERVER_HOST -DartifactId=$EUREKA_ID -Dversion=$EUREKA_VERSION
+	mvn archetype:generate -B -DarchetypeGroupId=$ARCHETYPES_GROUPID \
+								-DarchetypeVersion=$ARCHETYPES_VERSION \
+								-DarchetypeArtifactId=archetype-eureka \
+								-DgroupId=$SERVICES_GROUPID \
+								-Dconfig-server-host=$CONFIG_SERVER_HOST \
+								-DartifactId=$EUREKA_ID \
+								-Dversion=$EUREKA_VERSION
 	check_result $? "Eureka"
 
 
