@@ -10,10 +10,10 @@ function create_swagger_catalog() {
 
 	file_config_swaager="swagger-catalog.yml"
 
-	if [ -f "./$SWAGGER_CATALOG_ID/$file_config_swaager" ]
+	if [ -f "./$SWAGGER_CATALOG_ID//src/main/resources/$file_config_swaager" ]
 	then
 		msg_task "Moving config files to config service"
-		mv $PWD/$SWAGGER_CATALOG_ID/$file_config_swaager $PWD/$CONFIG_SERVER_ID/src/main/resources/config/$file_config_swaager
+		mv $PWD/$SWAGGER_CATALOG_ID/src/main/resources/$file_config_swaager $PWD/$CONFIG_SERVER_ID/src/main/resources/config/$file_config_swaager
 		check_mv $? "Swagger Catalog"
 	fi
 

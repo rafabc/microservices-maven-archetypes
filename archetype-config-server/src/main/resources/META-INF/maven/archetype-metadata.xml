@@ -6,6 +6,7 @@
 	<requiredProperties>
 		<requiredProperty key="config-server-port" />
 		<requiredProperty key="zuul-port" />
+		<requiredProperty key="zuul-admin-port" />
 		<requiredProperty key="spring-boot-admin-port" />
 		<requiredProperty key="zipkin-port" />
 		<requiredProperty key="eureka-host">

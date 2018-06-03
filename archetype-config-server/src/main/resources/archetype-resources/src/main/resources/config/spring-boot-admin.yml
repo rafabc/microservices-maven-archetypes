@@ -11,6 +11,4 @@ eureka:
     healthcheck:
       enabled: true
     lease:
-      duration: 5 
-
-management.security.enabled: false      
+      duration: 5     

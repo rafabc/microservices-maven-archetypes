@@ -21,6 +21,7 @@ export ZIPKIN_VERSION="0.0.1-SNAPSHOT"
 export ZIPKIN_ID="zipkin"
 
 export ZUUL_PORT=8082
+export ZUUL_ADMIN_PORT=9094
 export ZUUL_VERSION="0.0.1-SNAPSHOT"
 export ZUUL_ID="zuul"
 
