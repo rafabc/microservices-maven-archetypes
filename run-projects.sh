@@ -4,9 +4,9 @@
 . scripts/utils/simbols.sh
 . scripts/utils/messages.sh
 
-msg_task "Running java -jar projects"
+msg_task "Running java -jar samples"
 
-cd projects
+cd samples
 
 delay=40
 

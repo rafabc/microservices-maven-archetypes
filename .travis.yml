@@ -25,7 +25,7 @@ before_install:
 
 deploy:
   provider: heroku
-  app: damp-wildwood-93713
+  app: microservices-architecture
   skip_cleanup: true
   api_key:
     secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506

@@ -18,8 +18,8 @@
 msg_task_gen "Launching maven create projects from archetypes"
 mvn -v
 
-mkdir projects
-cd projects
+mkdir samples
+cd samples
 
 
 create_config_server
