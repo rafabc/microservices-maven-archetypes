@@ -6,7 +6,7 @@ eureka:
   instance:
     hostname: ${eureka-host}
     preferIpAddress: false
-    
+    leaseRenewalIntervalInSeconds: 5
     statusPageUrlPath: ${dollar}{management.contextPath}/info
     healthCheckUrlPath: ${dollar}{management.contextPath}/health
     metadataMap:
@@ -17,9 +17,12 @@ eureka:
     registerWithEureka: true
     fetchRegistry: false
     preferIpAddress: false
+    healthcheck:
+      enabled: true
   server:
     waitTimeInMsWhenSyncEmpty: 0  
     enableSelfPreservation: true
+    renewalPercentThreshold: 10
 
 logging:
   level.com.netflix.zuul: INFO
@@ -29,5 +32,4 @@ logging:
   level.org.springframework.cloud.sleuth.trace: INFO
   level.org.springframework.cloud.sleuth.instrument.rxjava: INFO    
     
-eureka.server.renewalPercentThreshold: 10
-eureka.instance.leaseRenewalIntervalInSeconds: 5            
+           

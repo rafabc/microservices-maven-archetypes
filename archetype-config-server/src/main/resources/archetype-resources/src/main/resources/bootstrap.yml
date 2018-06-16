@@ -1,5 +1,11 @@
+ #set( $dollar = '$' )
+ 
+server:
+  port: ${dollar}{PORT:${config-server-port}}
+
+
 spring:
   application:
     name: config-server
-server:
-  port: ${config-server-port}
+#server:
+#  port: ${config-server-port}
