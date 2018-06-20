@@ -1,3 +1,5 @@
+ #set( $dollar = '$' )
+ 
 spring:
   cloud:
     config:
