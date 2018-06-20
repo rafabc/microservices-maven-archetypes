@@ -40,6 +40,8 @@ jobs:
   include:
     - stage: deploy to staging
       script: skip
+      before_deploy:
+        - chmod +x ./deploy.sh
       deploy: &heroku
         provider: heroku
         app: micro-config-server
