@@ -3,18 +3,18 @@ language: java
 jdk:
 - oraclejdk8
 
-install: "./mvn-install-archetypes.sh"
-script: "./mvn-create-samples.sh"
+#install: "./mvn-install-archetypes.sh"
+#script: "./mvn-create-samples.sh"
 
 
-before_install:
-  - chmod +x mvn-install-archetypes.sh
-  - chmod +x mvn-create-samples.sh
-  - chmod +x ./deploy.sh
+#before_install:
+#  - chmod +x mvn-install-archetypes.sh
+#  - chmod +x mvn-create-samples.sh
+#  - chmod +x ./deploy.sh
 
 
-before_deploy:
-  - chmod +x ./deploy.sh
+#before_deploy:
+#  - chmod +x ./deploy.sh
 
 
 #deploy:
@@ -38,20 +38,18 @@ before_deploy:
 
 jobs:
   include:
-    - stage: deploy to staging
-      script: skip
-      before_deploy:
+    - stage: installing archetypes
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
         - chmod +x ./deploy.sh
-      deploy: &heroku
+      install: "./mvn-install-archetypes.sh"
+    - stage: cerating projects
+      script: "./mvn-create-samples.sh"
+    - stage: deploying projects
+      deploy:
         provider: heroku
         app: micro-config-server
-        api_key: 8af7a514-9b3c-4e51-acb5-dbb11d329506
-    - stage: test staging
-      script: 'curl http://micro-config-server.herokuapp.com/zuul/info'
-    - stage: deploy to production
-      script: skip
-      deploy:
-        <<: *heroku
-        app: micro-eureka
-    - stage: test production
-      script: 'curl http://micro-eureka.herokuapp.com'
+        skip_cleanup: true
+        api_key:
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
