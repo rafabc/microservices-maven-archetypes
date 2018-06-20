@@ -10,6 +10,12 @@
         <requiredProperty key="config-server-port">
         	<defaultValue>1111</defaultValue>
         </requiredProperty>
+        <requiredProperty key="zuul-port">
+        	<defaultValue>4444</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="zuul-admin-port">
+        	<defaultValue>9094</defaultValue>
+        </requiredProperty>        
     </requiredProperties>
     
 	<fileSets>

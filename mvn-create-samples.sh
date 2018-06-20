@@ -25,7 +25,7 @@ cd samples
 create_config_server
 create_eureka
 create_spring_boot_admin
-#create_zuul
+create_zuul
 #create_zipkin
 #create_swagger_catalog
 #create_micro_spring

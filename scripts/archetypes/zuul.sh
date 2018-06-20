@@ -10,7 +10,9 @@ function create_zuul() {
 								-DgroupId=$SERVICES_GROUPID \
 								-Dconfig-server-host=$CONFIG_SERVER_HOST \
 								-DartifactId=$ZUUL_ID \
-								-Dversion=$ZUUL_VERSION
+								-Dversion=$ZUUL_VERSION \
+								-Dzuul-port=$ZUUL_PORT \
+								-Dzuul-admin-port=$ZUUL_ADMIN_PORT
 	check_result $? "Zuul"
 
 	cd $ZUUL_ID

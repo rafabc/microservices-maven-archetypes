@@ -1,6 +1,4 @@
-
-
-    
+   
 eureka:
   instance:
     preferIpAddress: false

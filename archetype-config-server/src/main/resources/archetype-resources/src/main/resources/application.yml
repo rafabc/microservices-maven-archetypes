@@ -5,11 +5,11 @@ spring:
         native:
           search-locations: classpath:/config
         git:
-          uri: https://github.com/rafabc/microservice-graphql
+          uri: https://github.com/rafabc/microservice-maven-archetypes
           default-label: master
-          search-paths: microservice_config_server/src/main/resources/config
+          search-paths: archetype-config-server/src/main/resources/archetype-resources/src/main/resources/config
   profiles:
-     active: native
+     active: git
 
 
 eureka:
