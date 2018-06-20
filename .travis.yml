@@ -47,7 +47,8 @@ jobs:
       script: 'curl http://micro-config-server.herokuapp.com/zuul/info'
     - stage: deploy to production
       script: skip
-      deploy: heroku
+      deploy:
+        <<: heroku
         app: micro-eureka
     - stage: test production
       script: 'curl http://micro-eureka.herokuapp.com/eureka/'
