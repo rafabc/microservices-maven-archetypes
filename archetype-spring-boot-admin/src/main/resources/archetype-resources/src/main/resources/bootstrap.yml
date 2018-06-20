@@ -7,5 +7,5 @@ spring:
     name: spring-boot-admin
   cloud:
     config:
-      uri: http://${config-server-host}:${config-server-port}
+      uri: ${dollar}{URL_CONFIG_SERVER:http://${config-server-host}:${config-server-port}}
       fail-fast: true     
