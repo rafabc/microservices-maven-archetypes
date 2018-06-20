@@ -1,7 +1,9 @@
+ #set( $dollar = '$' )
+
 spring:
   application:
     name: eureka
   cloud:
     config:
-      uri: http://${config-server-host}:${config-server-port}
+      uri: ${dollar}{URL:http://${config-server-host}:${config-server-port}}
       fail-fast: true

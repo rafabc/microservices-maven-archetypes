@@ -23,16 +23,32 @@ before_install:
 #  application: MyApp
 #  deployment_group: MyDeploymentGroup
 
-deploy:
-  provider: heroku
-  app: micro-config-server
-  skip_cleanup: true
-  api_key:
-    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+#deploy:
+#  provider: heroku
+#  app: micro-config-server
+#  skip_cleanup: true
+#  api_key:
+#    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
 
-deploy:
-  provider: heroku
-  app: micro-eureka
-  skip_cleanup: true
-  api_key:
-    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+
+jobs:
+  include:
+    - stage: unit tests
+      script: "Running unit tests (1)"
+    - stage: unit tests
+      script: "Running unit tests (2)"
+    - stage: deploy to staging
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: micro-config-server
+        api_key: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+    - stage: test staging
+      script: 'curl http://micro-config-server.herokuapp.com/zuul/info'
+    - stage: deploy to production
+      script: skip
+      deploy:
+        <<: *heroku
+        app: micro-eureka
+    - stage: test production
+      script: 'curl http://micro-eureka.herokuapp.com'
