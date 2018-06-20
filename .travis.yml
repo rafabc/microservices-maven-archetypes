@@ -45,8 +45,14 @@ jobs:
         - chmod +x ./deploy.sh
       install: "./mvn-install-archetypes.sh"
     - stage: cerating projects
+      before_script:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
       script: "./mvn-create-samples.sh"
     - stage: deploying projects
+      before_deploy:
+        - chmod +x ./deploy.sh
       deploy:
         provider: heroku
         app: micro-config-server
