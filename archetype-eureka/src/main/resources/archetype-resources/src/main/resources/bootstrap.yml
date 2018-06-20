@@ -1,5 +1,6 @@
  #set( $dollar = '$' )
-
+server:
+  port: ${dollar}{PORT:${eureka-port}}
 spring:
   application:
     name: eureka

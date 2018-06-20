@@ -1,6 +1,3 @@
- #set( $dollar = '$' )
-server:
-    port: ${eureka-port}
    
 eureka:
   instance:

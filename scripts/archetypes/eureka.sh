@@ -10,7 +10,8 @@ function create_eureka() {
 								-DgroupId=$SERVICES_GROUPID \
 								-Dconfig-server-host=$CONFIG_SERVER_HOST \
 								-DartifactId=$EUREKA_ID \
-								-Dversion=$EUREKA_VERSION
+								-Dversion=$EUREKA_VERSION \
+								-Deureka-port=$EUREKA_PORT
 	check_result $? "Eureka"
 
 

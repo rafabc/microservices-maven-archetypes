@@ -10,6 +10,9 @@
         <requiredProperty key="config-server-port">
         	<defaultValue>1111</defaultValue>
         </requiredProperty>
+         <requiredProperty key="eureka-port">
+        	<defaultValue>2222</defaultValue>
+        </requiredProperty>
     </requiredProperties>
     
 	<fileSets>
