@@ -5,9 +5,10 @@ spring:
         native:
           search-locations: classpath:/config
         git:
-          uri: https://github.com/rafabc/microservice-maven-archetypes
+          uri: https://github.com/rafabc/microservices-maven-archetypes
+          skipSslValidation: true
           default-label: master
-          search-paths: archetype-config-server/src/main/resources/archetype-resources/src/main/resources/config
+          search-paths: archetype-config-server,config* #/src/main/resources/archetype-resources/src/main/resources/config
   profiles:
      active: git
 
