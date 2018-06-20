@@ -1,1 +1,1 @@
-nohup java $JAVA_OPTS -jar ./samples/$APP/target/*.jar
+java $JAVA_OPTS -jar ./samples/$APP/target/*.jar #APP VAR is parametrized in heroku settings for each app

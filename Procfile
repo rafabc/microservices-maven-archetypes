@@ -1,1 +1,1 @@
-web: ./scripts/deploy.sh configserver
+web: ./scripts/deploy.sh
