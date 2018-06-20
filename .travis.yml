@@ -39,7 +39,7 @@ jobs:
       script: "Running unit tests (2)"
     - stage: deploy to staging
       script: skip
-      deploy: &heroku
+      deploy: heroku
         provider: heroku
         app: micro-config-server
         api_key: 8af7a514-9b3c-4e51-acb5-dbb11d329506
