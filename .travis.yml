@@ -12,6 +12,11 @@ before_install:
   - chmod +x mvn-create-samples.sh
   - chmod +x ./scripts/deploy.sh
 
+
+before_deploy:
+  - chmod +x ./scripts/deploy.sh
+
+
 #deploy:
 #  - provider: s3
 #  ⋮ # rest of S3 deployment for MyApp.zip
