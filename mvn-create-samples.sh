@@ -21,7 +21,7 @@ mvn -v
 mkdir samples
 cd samples
 
-
+#######RUNNING FUNCTIONS FOR PROJECTS CREATION#####
 create_config_server
 create_eureka
 #create_spring_boot_admin
