@@ -48,7 +48,7 @@ jobs:
     - stage: deploy to production
       script: skip
       deploy:
-        <<: heroku
+        <<: *heroku
         app: micro-eureka
     - stage: test production
-      script: 'curl http://micro-eureka.herokuapp.com/eureka/'
+      script: 'curl http://micro-eureka.herokuapp.com'
