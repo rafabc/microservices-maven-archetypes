@@ -1,1 +1,1 @@
-web: ./scripts/deploy.sh
+web: ./deploy.sh
