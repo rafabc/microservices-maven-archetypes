@@ -10,7 +10,7 @@ spring:
           default-label: master
           search-paths: archetype-config-server,config* #/src/main/resources/archetype-resources/src/main/resources/config
   profiles:
-     active: git
+     active: native
 
 
 eureka:
