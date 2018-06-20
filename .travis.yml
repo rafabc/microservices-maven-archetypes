@@ -10,7 +10,7 @@ script: "./mvn-create-samples.sh"
 before_install:
   - chmod +x mvn-install-archetypes.sh
   - chmod +x mvn-create-samples.sh
-  - chmod +x deploy.sh
+  - chmod +x ./scripts/deploy.sh
 
 #deploy:
 #  - provider: s3
