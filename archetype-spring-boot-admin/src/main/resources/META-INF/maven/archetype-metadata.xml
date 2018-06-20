@@ -10,6 +10,9 @@
 		<requiredProperty key="config-server-port">
 			<defaultValue>1111</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="spring-boot-admin-port">
+			<defaultValue>3333</defaultValue>
+		</requiredProperty>		
 	</requiredProperties>
 
 	<fileSets>

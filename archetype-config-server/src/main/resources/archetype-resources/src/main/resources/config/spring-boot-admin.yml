@@ -1,13 +1,12 @@
 
-server:
-  port: ${spring-boot-admin-port}
+
     
 eureka:
   instance:
     preferIpAddress: false
   client:
     serviceUrl:
-      defaultZone: http://${eureka-host}:${eureka-port}/eureka
+      defaultZone: ${dollar}{URL_EUREKA:http:///${eureka-host}:${eureka-port}/eureka}
     healthcheck:
       enabled: true
     lease:

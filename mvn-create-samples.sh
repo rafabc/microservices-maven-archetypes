@@ -24,7 +24,7 @@ cd samples
 #######RUNNING FUNCTIONS FOR PROJECTS CREATION#####
 create_config_server
 create_eureka
-#create_spring_boot_admin
+create_spring_boot_admin
 #create_zuul
 #create_zipkin
 #create_swagger_catalog

@@ -20,8 +20,8 @@ mvn -v
 
 archetypes[0]=archetype-config-server
 archetypes[1]=archetype-eureka
-#archetypes[2]=archetype-swagger-catalog
-#archetypes[3]=archetype-spring-boot-admin
+archetypes[2]=archetype-spring-boot-admin
+#archetypes[3]=archetype-swagger-catalog
 #archetypes[4]=archetype-zuul
 #archetypes[5]=archetype-zipkin
 #archetypes[6]=archetype-microservice-node

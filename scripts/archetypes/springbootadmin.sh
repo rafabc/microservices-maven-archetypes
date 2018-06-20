@@ -10,14 +10,15 @@ function create_spring_boot_admin() {
 								-DgroupId=$SERVICES_GROUPID \
 								-Dconfig-server-host=$CONFIG_SERVER_HOST \
 								-DartifactId=$SPRING_BOOT_ADMIN_ID \
-								-Dversion=$SPRING_BOOT_ADMIN_VERSION
+								-Dversion=$SPRING_BOOT_ADMIN_VERSION \
+								-Dspring-boot-admin-port=$SPRING_BOOT_ADMIN_PORT
 
 	check_result $? "Spring Boot Admin"
 
 	cd $SPRING_BOOT_ADMIN_ID
-	msg_task "Running mvn install for Swagger Catalog"
+	msg_task "Running mvn install for Spring Boot Admin"
 	mvn clean install
-	check_mvn_install $? "Swagger Catalog"
+	check_mvn_install $? "Spring Boot Admin"
 	cd ..
 
 }

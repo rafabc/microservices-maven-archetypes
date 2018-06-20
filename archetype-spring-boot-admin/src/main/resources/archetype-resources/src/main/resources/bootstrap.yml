@@ -1,3 +1,7 @@
+ #set( $dollar = '$' )
+ 
+server:
+  port: ${dollar}{PORT:${spring-boot-admin-port}}
 spring:
   application:
     name: spring-boot-admin
