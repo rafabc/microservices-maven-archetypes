@@ -3,7 +3,7 @@
 server:
   port: ${dollar}{PORT:${zuul-port}}
 management:
-  port: ${dollar}{PORT:${zuul-admin-port}}
+  port: ${dollar}{NODE_ENV:${zuul-admin-port}}
   ssl:
     enabled: false
 
