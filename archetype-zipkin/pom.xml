@@ -4,7 +4,7 @@
 	<groupId>com.archetypes</groupId>
 	<artifactId>archetype-zipkin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>archetye-zipkin</name>
+	<name>archetype-zipkin</name>
 	<description>Archetype for create zipkin server</description>
 	<packaging>maven-archetype</packaging>	
 

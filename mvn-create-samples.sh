@@ -64,6 +64,9 @@ else
 	if [ "$1" == "archetype-spring-boot-admin" ]; then
 		create_spring_boot_admin
 	fi
+	if [ "$1" == "archetype-zuul" ]; then
+		create_zuul
+	fi
 fi
 
 

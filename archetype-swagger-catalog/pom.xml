@@ -4,7 +4,7 @@
 	<groupId>com.archetypes</groupId>
 	<artifactId>archetype-swagger-catalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>swagger-catalog</name>
+	<name>archetype-swagger-catalog</name>
 	<description>Central microservice with catalog or swagger</description>
 
 	<packaging>maven-archetype</packaging>
