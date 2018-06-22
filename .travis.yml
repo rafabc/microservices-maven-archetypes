@@ -43,8 +43,8 @@ jobs:
         - chmod +x mvn-install-archetypes.sh
         - chmod +x mvn-create-samples.sh
         - chmod +x ./deploy.sh
-      install: "./mvn-install-archetypes.sh"
-      script: "./mvn-create-samples.sh"
+      install: "./mvn-install-archetypes.sh archetype-config-server"
+      script: "./mvn-create-samples.sh archetype-config-server"
       deploy:
         provider: heroku
         app: micro-config-server
@@ -56,8 +56,8 @@ jobs:
         - chmod +x mvn-install-archetypes.sh
         - chmod +x mvn-create-samples.sh
         - chmod +x ./deploy.sh
-      install: "./mvn-install-archetypes.sh"
-      script: "./mvn-create-samples.sh"
+      install: "./mvn-install-archetypes.sh archetype-eureka"
+      script: "./mvn-create-samples.sh archetype-eureka"
       deploy:
         provider: heroku
         app: micro-eureka
@@ -69,8 +69,8 @@ jobs:
         - chmod +x mvn-install-archetypes.sh
         - chmod +x mvn-create-samples.sh
         - chmod +x ./deploy.sh
-      install: "./mvn-install-archetypes.sh"
-      script: "./mvn-create-samples.sh"
+      install: "./mvn-install-archetypes.sh archetype-spring-boot-admin"
+      script: "./mvn-create-samples.sh archetype-spring-boot-admin"
       deploy:
         provider: heroku
         app: micro-spring-boot-admin

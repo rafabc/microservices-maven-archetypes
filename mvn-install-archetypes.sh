@@ -17,23 +17,27 @@ mvn -v
 #cd archetype-microservice-spring && mvn clean install && cd ..
 #cd archetype-microservice-node && mvn clean install && cd ..
 
+archetypes[0]=""
 
-archetypes[0]=archetype-config-server
-archetypes[1]=archetype-eureka
-archetypes[2]=archetype-spring-boot-admin
-archetypes[3]=archetype-zuul
-
-#archetypes[4]=archetype-zipkin
-#archetypes[5]=archetype-swagger-catalog
-#archetypes[6]=archetype-microservice-node
-#archetypes[7]=archetype-microservice-spring
+if [ -z "$1" ]; then
+	archetypes[0]=archetype-config-server
+	archetypes[1]=archetype-eureka
+	archetypes[2]=archetype-spring-boot-admin
+	archetypes[3]=archetype-zuul
+	#archetypes[4]=archetype-zipkin
+	#archetypes[5]=archetype-swagger-catalog
+	#archetypes[6]=archetype-microservice-node
+	#archetypes[7]=archetype-microservice-spring
+else 
+	archetypes[0]="$1"
+fi
 
 	
 
 ##NEXT CODE IS AND AUTOMATIC VERSION OF INSTALLATION
 for arch in ${archetypes[*]} ; do
 	
-	if [[ ( $arch == *"archetype-"* ) ]]; then  #second if check if is a directory
+	if [[ ( $arch == *"archetype-"* ) ]]; then
 		
 		cd $arch
 		msg_task "Runing mvn install archetype $arch"

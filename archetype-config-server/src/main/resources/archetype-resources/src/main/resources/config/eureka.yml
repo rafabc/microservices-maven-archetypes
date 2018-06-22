@@ -11,7 +11,7 @@ eureka:
       instanceId: ${dollar}{vcap.application.instance_id:${dollar}{spring.application.name}:${dollar}{spring.application.instance_id:${dollar}{server.port}}}
   client:
     serviceUrl:
-      defaultZone: http://${eureka-host}:${eureka-port}/eureka/   #necesary to eureka dont try to config peer zone in 8761 por by default
+      defaultZone:  ${dollar}{URL_EUREKA:http:///${eureka-host}:${eureka-port}/eureka}   #necesary to eureka dont try to config peer zone in 8761 por by default
     registerWithEureka: true
     fetchRegistry: false
     preferIpAddress: false
