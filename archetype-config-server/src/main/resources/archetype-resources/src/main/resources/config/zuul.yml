@@ -13,7 +13,7 @@ eureka:
     preferIpAddress: false
   client:
     serviceUrl:
-      defaultZone: ${dollar}{URL_EUREKA:http:///${eureka-host}:${eureka-port}/eureka}
+      defaultZone: ${dollar}{URL_EUREKA:http://${eureka-host}:${eureka-port}/eureka}
     healthcheck:
       enabled: true
     lease:

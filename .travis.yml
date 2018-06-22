@@ -76,4 +76,17 @@ jobs:
         app: micro-spring-boot-admin
         skip_cleanup: true
         api_key:
-          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506                     
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+    - stage: running micro-zuul
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-zuul"
+      script: "./mvn-create-samples.sh archetype-zuul"
+      deploy:
+        provider: heroku
+        app: micro-zuul
+        skip_cleanup: true
+        api_key:
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506             
