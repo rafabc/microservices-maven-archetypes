@@ -1,0 +1,92 @@
+sudo: true
+language: java
+jdk:
+- oraclejdk8
+
+#install: "./mvn-install-archetypes.sh"
+#script: "./mvn-create-samples.sh"
+
+
+#before_install:
+#  - chmod +x mvn-install-archetypes.sh
+#  - chmod +x mvn-create-samples.sh
+#  - chmod +x ./deploy.sh
+
+
+#before_deploy:
+#  - chmod +x ./deploy.sh
+
+
+#deploy:
+#  - provider: s3
+#  ⋮ # rest of S3 deployment for MyApp.zip
+#  - provider: codedeploy
+#  access_key_id: "YOUR AWS ACCESS KEY"
+#  secret_access_key: "YOUR AWS SECRET KEY"
+#  bucket: "S3 Bucket"
+#  key: latest/MyApp.zip
+#  application: MyApp
+#  deployment_group: MyDeploymentGroup
+
+#deploy:
+#  provider: heroku
+#  app: micro-config-server
+#  skip_cleanup: true
+#  api_key:
+#    secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+
+
+jobs:
+  include:
+    - stage: running micro-config-server
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-config-server"
+      script: "./mvn-create-samples.sh archetype-config-server"
+      deploy:
+        provider: heroku
+        app: micro-config-server
+        skip_cleanup: true
+        api_key:
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+    - stage: running micro-eureka
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-eureka"
+      script: "./mvn-create-samples.sh archetype-eureka"
+      deploy:
+        provider: heroku
+        app: micro-eureka
+        skip_cleanup: true
+        api_key:
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506   
+    - stage: running micro-spring-boot-admin
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-spring-boot-admin"
+      script: "./mvn-create-samples.sh archetype-spring-boot-admin"
+      deploy:
+        provider: heroku
+        app: micro-spring-boot-admin
+        skip_cleanup: true
+        api_key:
+          secure: 8af7a514-9b3c-4e51-acb5-dbb11d329506
+    - stage: running micro-zuul
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-zuul"
+      script: "./mvn-create-samples.sh archetype-zuul"
+      deploy:
+        provider: heroku
+        app: micro-zuul
+        skip_cleanup: true
+        api_key:
+          secure: ${heroky_api_key}             
