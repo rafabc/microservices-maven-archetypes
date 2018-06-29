@@ -36,6 +36,7 @@ deploy:
   env: "microservices-env"
   bucket_name: "elasticbeanstalk-us-east-2-532222486980"  
 
+
 #deploy:
 #  provider: heroku
 #  app: micro-config-server
