@@ -30,8 +30,6 @@ jdk:
 before_deploy: "echo 'ready?'"
 
 deploy:
-  - provider: s3
-    ⋮ # rest of S3 deployment for MyApp.zip
   - provider: codedeploy
     access_key_id: ${aws_access_key_id}
     secret_access_key: ${aws_secret_acces_key}
