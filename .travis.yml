@@ -29,14 +29,28 @@ jdk:
 
 before_deploy: "echo 'ready?'"
 
-deploy:
-  - provider: codedeploy
-    access_key_id: ${aws_access_key_id}
-    secret_access_key: ${aws_secret_acces_key}
-    bucket: "elasticbeanstalk-us-east-2-532222486980"
-    key: latest/microservices.zip
-    application: micros-netflix
-    deployment_group: netflix-deployment-group 
+
+
+
+
+jobs:
+  include:
+    - stage: running micro-config-server
+      before_install:
+        - chmod +x mvn-install-archetypes.sh
+        - chmod +x mvn-create-samples.sh
+        - chmod +x ./deploy.sh
+      install: "./mvn-install-archetypes.sh archetype-config-server"
+      script: "./mvn-create-samples.sh archetype-config-server"
+      deploy:
+        provider: codedeploy
+        access_key_id: ${aws_access_key_id}
+        secret_access_key: ${aws_secret_acces_key}
+        bucket: "elasticbeanstalk-us-east-2-532222486980"
+        key: latest/microservices.zip
+        application: micros-netflix
+        deployment_group: netflix-deployment-group 
+        skip_cleanup: true
 
 
 after_deploy: "echo 'finish'"
