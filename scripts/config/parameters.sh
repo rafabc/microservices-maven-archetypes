@@ -5,7 +5,7 @@ export LOCALHOST="localhost"
 export CONFIG_SERVER_HOST=$LOCALHOST
 export CONFIG_SERVER_PORT=1111
 export CONFIG_SERVER_VERSION="0.0.1-SNAPSHOT"
-export CONFIG_SERVER_ID="configserver"
+export CONFIG_SERVER_ID="config-server"
 
 export EUREKA_HOST=$LOCALHOST
 export EUREKA_PORT=2222
@@ -14,7 +14,7 @@ export EUREKA_ID="eureka"
 
 export SPRING_BOOT_ADMIN_PORT=3333
 export SPRING_BOOT_ADMIN_VERSION="0.0.1-SNAPSHOT"
-export SPRING_BOOT_ADMIN_ID="springbootadmin"
+export SPRING_BOOT_ADMIN_ID="spring-boot-admin"
 
 export ZIPKIN_PORT=4444
 export ZIPKIN_VERSION="0.0.1-SNAPSHOT"
