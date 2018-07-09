@@ -4,7 +4,3 @@ server:
 spring:
   application:
     name: eureka
-  cloud:
-    config:
-      uri: ${dollar}{URL_CONFIG_SERVER:http://${config-server-host}:${config-server-port}}
-      fail-fast: true

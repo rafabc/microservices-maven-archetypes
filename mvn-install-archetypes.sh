@@ -29,7 +29,9 @@ if [ -z "$1" ]; then
 	#archetypes[6]=archetype-microservice-node
 	#archetypes[7]=archetype-microservice-spring
 else 
-	archetypes[0]="$1"
+	arc="archetype-$1"
+	echo "$arc"
+	archetypes[0]="$arc"
 fi
 
 	
@@ -51,7 +53,7 @@ for arch in ${archetypes[*]} ; do
 		fi
 		
 		msg_task "Updating maven catalog for $arch"
-		mvn install archetype:update-local-catalog
+		mvn clean install archetype:update-local-catalog
 		STATUS=$?
 		if [ $STATUS -eq 0 ]; then
 			msg_ok "catalog updated correctly for $arch"

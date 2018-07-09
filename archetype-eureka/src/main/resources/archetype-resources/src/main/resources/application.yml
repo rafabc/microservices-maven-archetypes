@@ -1,0 +1,33 @@
+#set( $dollar = '$' )
+
+eureka:
+  instance:
+    hostname: ${eureka-host}
+    preferIpAddress: false
+    leaseRenewalIntervalInSeconds: 5
+    statusPageUrlPath: ${dollar}{management.contextPath}/info
+    healthCheckUrlPath: ${dollar}{management.contextPath}/health
+    metadataMap:
+      instanceId: ${dollar}{vcap.application.instance_id:${dollar}{spring.application.name}:${dollar}{spring.application.instance_id:${dollar}{server.port}}}
+  client:
+    serviceUrl:
+      defaultZone:  ${dollar}{URL_EUREKA:http://${eureka-host}:${eureka-port}/eureka}   #necesary to eureka dont try to config peer zone in 8761 por by default
+    registerWithEureka: true
+    fetchRegistry: false
+    preferIpAddress: false
+    healthcheck:
+      enabled: true
+  server:
+    waitTimeInMsWhenSyncEmpty: 0  
+    enableSelfPreservation: true
+    renewalPercentThreshold: 10
+
+logging:
+  level.com.netflix.zuul: INFO
+  level.org.springframework.cloud: INFO
+  level.org.springframework.cloud.sleuth: TRACE
+  level.org.springframework.cloud.sleuth.log: INFO
+  level.org.springframework.cloud.sleuth.trace: INFO
+  level.org.springframework.cloud.sleuth.instrument.rxjava: INFO    
+    
+           

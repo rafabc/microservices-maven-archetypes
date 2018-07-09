@@ -11,7 +11,8 @@ function create_eureka() {
 								-Dconfig-server-host=$CONFIG_SERVER_HOST \
 								-DartifactId=$EUREKA_ID \
 								-Dversion=$EUREKA_VERSION \
-								-Deureka-port=$EUREKA_PORT
+								-Deureka-port=$EUREKA_PORT \
+								-Deureka-host=$EUREKA_HOST
 	check_result $? "Eureka"
 
 

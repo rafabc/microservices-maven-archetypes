@@ -37,10 +37,10 @@ if [ -z "$1" ]; then #used in local for full installation
 	create_eureka
 	create_spring_boot_admin
 	create_zuul
-	#create_zipkin
-	#create_swagger_catalog
-	#create_micro_spring
-	#create_micro_node
+	create_zipkin
+	create_swagger_catalog
+	create_micro_spring
+	create_micro_node
 
 	#AT THE END WHEN ALL PROJECT ARE CREATED IS NECESARY RUN MVN INSTALL FOR CONFIG SERVER
 	#LIKE THAT ALL CONFIG FILES HAVE BEEN MOVED TO CONFIG SERVER AND ITS READY TO MVN INSTALL
@@ -49,8 +49,10 @@ if [ -z "$1" ]; then #used in local for full installation
 	mvn clean install
 	check_mvn_install $? "Config Server"
 	cd ..
-else 
-	if [ "$1" == "archetype-config-server" ]; then
+else
+
+	$arc="archetype-$1"
+	if [ "$1" == "config-server" ]; then
 		create_config_server
 		cd $CONFIG_SERVER_ID
 		msg_task "Running mvn install for Config Sever"
@@ -58,13 +60,13 @@ else
 		check_mvn_install $? "Config Server"
 		cd ..
 	fi 
-	if [ "$1" == "archetype-eureka" ]; then
+	if [ "$1" == "eureka" ]; then
 		create_eureka
 	fi
-	if [ "$1" == "archetype-spring-boot-admin" ]; then
+	if [ "$1" == "spring-boot-admin" ]; then
 		create_spring_boot_admin
 	fi
-	if [ "$1" == "archetype-zuul" ]; then
+	if [ "$1" == "zuul" ]; then
 		create_zuul
 	fi
 fi

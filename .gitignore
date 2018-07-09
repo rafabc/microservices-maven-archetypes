@@ -32,3 +32,6 @@ zipkin/
 zuul/
 projects/
 samples/
+
+
+nohup*
