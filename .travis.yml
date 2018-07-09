@@ -62,6 +62,7 @@ jobs:
  #     script: "./mvn-create-samples.sh eureka"
       deploy:
         provider: codedeploy
+        revision_type: github
         access_key_id: ${aws_access_key_id}
         secret_access_key: ${aws_secret_acces_key}
         bucket: "elasticbeanstalk-us-east-2-532222486980"
