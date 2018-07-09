@@ -41,22 +41,23 @@ jobs:
         - chmod +x mvn-create-samples.sh
         - chmod +x ./deploy.sh
       install: "./mvn-install-archetypes.sh eureka"
-      script: "./mvn-create-samples.sh eureka"    
+      script: "./mvn-create-samples.sh eureka"  
+      before_deploy: rm -rf classes & rm -rf maven-status
       deploy:
         provider: s3
         access_key_id: ${aws_access_key_id}
         secret_access_key: ${aws_secret_acces_key}
         bucket: "elasticbeanstalk-us-east-2-532222486980"
         local_dir: samples/eureka/target
-        upload_dir: samples/eureka
+        upload_dir: eureka
         skip_cleanup: true
     - stage: running eureka
-      before_install:
-        - chmod +x mvn-install-archetypes.sh
-        - chmod +x mvn-create-samples.sh
-        - chmod +x ./deploy.sh
-      install: "./mvn-install-archetypes.sh eureka"
-      script: "./mvn-create-samples.sh eureka"
+ #     before_install:
+ #       - chmod +x mvn-install-archetypes.sh
+ #       - chmod +x mvn-create-samples.sh
+ #       - chmod +x ./deploy.sh
+ #     install: "./mvn-install-archetypes.sh eureka"
+ #     script: "./mvn-create-samples.sh eureka"
       deploy:
         provider: codedeploy
         access_key_id: ${aws_access_key_id}
