@@ -42,7 +42,9 @@ jobs:
         - chmod +x ./deploy.sh
       install: "./mvn-install-archetypes.sh eureka"
       script: "./mvn-create-samples.sh eureka"  
-      before_deploy: rm -rf classes & rm -rf maven-status
+      ignore:
+        - /samples/eureka/target/classes
+      before_deploy: rm -rf /samples/eureka/maven-status
       deploy:
         provider: s3
         access_key_id: ${aws_access_key_id}
@@ -63,7 +65,7 @@ jobs:
         access_key_id: ${aws_access_key_id}
         secret_access_key: ${aws_secret_acces_key}
         bucket: "elasticbeanstalk-us-east-2-532222486980"
-        key: samples/eureka/eureka-0.0.1-SNAPSHOT.jar
+        key: /eureka/eureka-0.0.1-SNAPSHOT.jar
         bundle_type: jar
         application: micros-netflix
         deployment_group: netflix-deployment-group 
