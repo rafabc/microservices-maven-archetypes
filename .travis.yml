@@ -70,6 +70,7 @@ jobs:
         application: micros-netflix
         deployment_group: netflix-deployment-group 
         skip_cleanup: true
+        region: us-east-2
 
 
 after_deploy: "echo 'finish'"
