@@ -47,8 +47,8 @@ jobs:
         access_key_id: ${aws_access_key_id}
         secret_access_key: ${aws_secret_acces_key}
         bucket: "elasticbeanstalk-us-east-2-532222486980"
-        local_dir: samples
-        upload_dir: samples
+        local_dir: samples/eureka/target
+        upload_dir: samples/eureka
         skip_cleanup: true
     - stage: running eureka
       before_install:
@@ -62,7 +62,8 @@ jobs:
         access_key_id: ${aws_access_key_id}
         secret_access_key: ${aws_secret_acces_key}
         bucket: "elasticbeanstalk-us-east-2-532222486980"
-        key: latest/microservices.zip
+        key: samples/eureka/eureka-0.0.1-SNAPSHOT.jar
+        bundle_type: jar
         application: micros-netflix
         deployment_group: netflix-deployment-group 
         skip_cleanup: true
