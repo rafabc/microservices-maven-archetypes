@@ -35,6 +35,14 @@ before_deploy: "echo 'ready?'"
 
 jobs:
   include:
+    - stage: deploy s3
+      deploy:
+        provider: s3
+        access_key_id: ${aws_access_key_id}
+        secret_access_key: ${aws_secret_acces_key}
+        bucket: "elasticbeanstalk-us-east-2-532222486980"
+        upload_dir: samples
+        skip_cleanup: true
     - stage: running eureka
       before_install:
         - chmod +x mvn-install-archetypes.sh
