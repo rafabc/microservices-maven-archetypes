@@ -51,7 +51,7 @@ if [ -z "$1" ]; then #used in local for full installation
 	cd ..
 else
 
-	$arc="archetype-$1"
+	arc="archetype-$1"
 	if [ "$1" == "config-server" ]; then
 		create_config_server
 		cd $CONFIG_SERVER_ID
@@ -69,6 +69,12 @@ else
 	if [ "$1" == "zuul" ]; then
 		create_zuul
 	fi
+	if [ "$1" == "zipkin" ]; then
+		create_zipkin
+	fi	
+	if [ "$1" == "swagger-catalog" ]; then
+		create_swagger_catalog
+	fi	
 fi
 
 

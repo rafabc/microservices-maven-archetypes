@@ -15,7 +15,7 @@ delay=40
 if [ -z "$1" ]; then #when there isnt parameters (without archetype input)
 
 	#IMPORTANT
-	#this script only run projects on windows thought git bash
+	#this if (no else) script only run projects on windows thought git bash
 
 	for d in * ; do
 		
