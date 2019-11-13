@@ -24,10 +24,10 @@ if [ -z "$1" ]; then
 	archetypes[1]=archetype-eureka
 	archetypes[2]=archetype-spring-boot-admin
 	archetypes[3]=archetype-zuul
-	#archetypes[4]=archetype-zipkin
-	#archetypes[5]=archetype-swagger-catalog
-	#archetypes[6]=archetype-microservice-node
-	#archetypes[7]=archetype-microservice-spring
+	archetypes[4]=archetype-zipkin
+	archetypes[5]=archetype-swagger-catalog
+	archetypes[6]=archetype-microservice-node
+	archetypes[7]=archetype-microservice-spring
 else 
 	arc="archetype-$1"
 	echo "$arc"

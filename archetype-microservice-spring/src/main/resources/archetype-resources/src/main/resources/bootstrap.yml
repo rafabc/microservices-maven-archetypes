@@ -5,3 +5,21 @@ spring:
     config:
       uri: http://${config-server-host}:${config-server-port}
       fail-fast: true 
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    metadataMap:
+      instanceId: ${dollar}{spring.cloud.client.hostname}:${dollar}{spring.application.name}:${dollar}{random.uuid}
+    instanceId: ${dollar}{spring.cloud.client.hostname}:${dollar}{spring.application.name}:${dollar}{random.uuid}   
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka-host}:${eureka-port}/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+      
+spring.sleuth.sampler.percentage: 1.0
+spring.sleuth.web.skipPattern: (^cleanup.*)        

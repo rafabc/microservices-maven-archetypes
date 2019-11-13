@@ -26,10 +26,10 @@ cd samples
 	archetypes[1]=archetype-eureka
 	archetypes[2]=archetype-spring-boot-admin
 	archetypes[3]=archetype-zuul
-	#archetypes[4]=archetype-zipkin
-	#archetypes[5]=archetype-swagger-catalog
-	#archetypes[6]=archetype-microservice-node
-	#archetypes[7]=archetype-microservice-spring
+	archetypes[4]=archetype-zipkin
+	archetypes[5]=archetype-swagger-catalog
+	archetypes[6]=archetype-microservice-node
+	archetypes[7]=archetype-microservice-spring
 
 if [ -z "$1" ]; then #used in local for full installation
 	#######RUNNING FUNCTIONS FOR PROJECTS CREATION#####
@@ -74,6 +74,9 @@ else
 	fi	
 	if [ "$1" == "swagger-catalog" ]; then
 		create_swagger_catalog
+	fi	
+	if [ "$1" == "micro-node" ]; then
+		create_micro_node
 	fi	
 fi
 
